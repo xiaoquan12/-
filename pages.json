@@ -13,7 +13,9 @@
 			"style": {}
 		}, {
 			"path": "pages/my/my",
-			"style": {}
+			"style": {
+				"navigationStyle":"custom"
+			}
 		}
 	],
 	"subPackages": [{
