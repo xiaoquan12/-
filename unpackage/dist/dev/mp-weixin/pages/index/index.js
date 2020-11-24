@@ -130,13 +130,17 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
-//
-//
-//
-//
-var _default =
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var VSearch = function VSearch() {__webpack_require__.e(/*! require.ensure | components/Search */ "components/Search").then((function () {return resolve(__webpack_require__(/*! @/components/Search */ 79));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+
+
+
+
+
+
 {
+  components: {
+    VSearch: VSearch },
+
   data: function data() {
     return {
       title: 'Hello' };

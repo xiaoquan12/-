@@ -1,10 +1,14 @@
 <template>
-	<view class="content">
+	<view class="flex-conDirection">
+		<VSearch></VSearch>
 	</view>
 </template>
-
 <script>
+	import VSearch from '@/components/Search'
 	export default {
+		components:{
+			VSearch
+		},
 		data() {
 			return {
 				title: 'Hello'

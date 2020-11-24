@@ -2,7 +2,7 @@
 <template>
 	<div class="relative flexbetween">
 		<div class="search-box flex-verCenter" :class="{'index':isIndex}">
-			<image class="inlineBlock search-img1" :src="isIndex?'/static/images/search.png':'/static/images/search-gray.png'" />
+			<image class="inlineBlock search-img1" src="/static/images/search-gray.png" />
 			<input v-if="isInput" type="text" confirm-type="search" @confirm='input' :value='inputValue' @input="inputValue=$event.detail.value"
 			 class="inlineBlock search-input" :placeholder="text" />
 			<view v-else class="inlineBlock search-label" @click="turnSearch">{{text}}</view>
@@ -21,7 +21,7 @@
 			},
 			text: {
 				type: String,
-				default: "搜索相关景点/目的地/店铺"
+				default: "搜索相关酒类"
 			},
 			isStore: {
 				type: Boolean,
