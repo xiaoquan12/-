@@ -54,7 +54,7 @@
 					<view class="num">
 						3
 					</view>
-					<view class="remark">
+					<view class="remark" data-url="/pages/my/coupon" @click="navigateTo">
 						优惠券
 					</view>
 				</view>
@@ -174,6 +174,12 @@
 		methods: {
 			getphonenumber(e) {
 				console.log(e)
+			},
+			navigateTo(e){
+			
+				let url=e.currentTarget.dataset.url;
+				
+				this.$common.redirect(url)
 			}
 		}
 	}
