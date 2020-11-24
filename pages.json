@@ -19,7 +19,7 @@
 		}
 	],
 	"subPackages": [{
-		"root": "pages/ordet",
+		"root": "pages/order",
 		"pages": []
 	}],
 
