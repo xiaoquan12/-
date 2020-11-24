@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/my/coupon",
     "pages/index/index",
     "pages/type/type",
     "pages/shopCar/shopCar",
@@ -8,9 +9,9 @@
   "subPackages": [],
   "window": {
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "uni-app",
-    "navigationBarBackgroundColor": "#F8F8F8",
-    "backgroundColor": "#F8F8F8"
+    "navigationBarTitleText": "BABICH",
+    "navigationBarBackgroundColor": "#ffffff",
+    "backgroundColor": "#ffffff"
   },
   "tabBar": {
     "color": "#ffffff",
