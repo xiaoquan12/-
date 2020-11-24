@@ -97,9 +97,9 @@
 	}
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 	page {
-		background: #F6F6F6;
+		background: $uni-bg-color-grey;
 	}
 
 	.coupon .item {
@@ -142,7 +142,7 @@
 		font-size: 40rpx;
 		font-family: PingFangSC-Regular, PingFang SC;
 		font-weight: 400;
-		color: #FF7F7F;
+		color: $uni-text-color;
 		line-height: 56rpx;
 
 	}
@@ -161,7 +161,7 @@
 		font-size: 28rpx;
 		font-family: PingFangSC-Regular, PingFang SC;
 		font-weight: 400;
-		color: #FF7F7F;
+		color: $uni-text-color;
 		line-height: 40rpx;
 		
 
@@ -180,6 +180,6 @@
 		width: 0;
 		height: 0;
 		border-left: 35rpx solid transparent;
-		border-top: 35rpx solid #FF7F7F;
+		border-top: 35rpx solid $uni-text-color;
 	}
 </style>
