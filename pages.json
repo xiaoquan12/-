@@ -25,7 +25,16 @@
 
 			}
 		}
-	],
+	    ,{
+            "path" : "pages/my/integral",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
 	"subPackages": [{
 		"root": "pages/order",
 		"pages": []
