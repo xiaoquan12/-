@@ -22,7 +22,7 @@
 			</view>
 			<view class="datas">
 
-				<view class="item">
+				<view class="item"  data-url="/pages/my/collection" @click="navigateTo">
 					<view class="num">
 						2
 
@@ -42,19 +42,19 @@
 						浏览记录
 					</view>
 				</view>
-				<view class="item">
+				<view class="item"  data-url="/pages/my/integral" @click="navigateTo">
 					<view class="num">
 						292931
 					</view>
-					<view class="remark" data-url="/pages/my/integral" @click="navigateTo">
+					<view class="remark">
 						我的积分
 					</view>
 				</view>
-				<view class="item">
+				<view class="item"  data-url="/pages/my/coupon" @click="navigateTo">
 					<view class="num">
 						3
 					</view>
-					<view class="remark" data-url="/pages/my/coupon" @click="navigateTo">
+					<view class="remark">
 						优惠券
 					</view>
 				</view>
