@@ -29,7 +29,7 @@
             "path" : "pages/my/integral",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "",
+                "navigationBarTitleText": "我的积分",
                 "enablePullDownRefresh": false
             }
             

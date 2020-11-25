@@ -46,7 +46,7 @@
 					<view class="num">
 						292931
 					</view>
-					<view class="remark">
+					<view class="remark" data-url="/pages/my/integral" @click="navigateTo">
 						我的积分
 					</view>
 				</view>
