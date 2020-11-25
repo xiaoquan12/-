@@ -9990,10 +9990,10 @@ var _api = _interopRequireDefault(__webpack_require__(/*! @/api */ 13));function
 
 var NAVS_ROUTES = [
 '/pages/index/index',
-'/pages/aboutMy/aboutMy',
-'/pages/map/map',
-'/pages/leaveWorld/leaveWorld',
-'/pages/cart/index'];
+'/pages/my/my',
+'/pages/shopCar/shopCar',
+'/pages/type/type'];
+
 
 var imgSrcReplace = function imgSrcReplace(htmlstr) {
   var regex3 = new RegExp(/<img [^>]*src=['"]([^'"]+)[^>]*>/gi);
@@ -10404,47 +10404,17 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.toFixTwo =
 /* 40 */,
 /* 41 */,
 /* 42 */,
-/* 43 */,
-/* 44 */,
-/* 45 */,
-/* 46 */,
-/* 47 */,
-/* 48 */,
-/* 49 */,
-/* 50 */,
-/* 51 */,
-/* 52 */,
-/* 53 */,
-/* 54 */,
-/* 55 */,
-/* 56 */,
-/* 57 */,
-/* 58 */,
-/* 59 */,
-/* 60 */,
-/* 61 */,
-/* 62 */,
-/* 63 */,
-/* 64 */,
-/* 65 */,
-/* 66 */,
-/* 67 */,
-/* 68 */,
-/* 69 */,
-/* 70 */,
-/* 71 */,
-/* 72 */,
-/* 73 */
+/* 43 */
 /*!*********************************************************************************************!*\
   !*** ./node_modules/@vue/babel-preset-app/node_modules/@babel/runtime/regenerator/index.js ***!
   \*********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! regenerator-runtime */ 74);
+module.exports = __webpack_require__(/*! regenerator-runtime */ 44);
 
 /***/ }),
-/* 74 */
+/* 44 */
 /*!************************************************************!*\
   !*** ./node_modules/regenerator-runtime/runtime-module.js ***!
   \************************************************************/
@@ -10475,7 +10445,7 @@ var oldRuntime = hadRuntime && g.regeneratorRuntime;
 // Force reevalutation of runtime.js.
 g.regeneratorRuntime = undefined;
 
-module.exports = __webpack_require__(/*! ./runtime */ 75);
+module.exports = __webpack_require__(/*! ./runtime */ 45);
 
 if (hadRuntime) {
   // Restore the original runtime.
@@ -10491,7 +10461,7 @@ if (hadRuntime) {
 
 
 /***/ }),
-/* 75 */
+/* 45 */
 /*!*****************************************************!*\
   !*** ./node_modules/regenerator-runtime/runtime.js ***!
   \*****************************************************/

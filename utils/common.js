@@ -4,11 +4,11 @@ import api from '@/api'
 
 const NAVS_ROUTES = [
 	'/pages/index/index',
-	'/pages/aboutMy/aboutMy',
-	'/pages/map/map',
-	'/pages/leaveWorld/leaveWorld',
-	'/pages/cart/index'
+	'/pages/my/my',
+	'/pages/shopCar/shopCar',
+	'/pages/type/type'
 ]
+
   export const imgSrcReplace=(htmlstr)=> {
       let regex3 = new RegExp(/<img [^>]*src=['"]([^'"]+)[^>]*>/gi);
       let domainURL = "http://www.baidu.com/";
