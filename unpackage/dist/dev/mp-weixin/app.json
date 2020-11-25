@@ -1,10 +1,11 @@
 {
   "pages": [
-    "pages/my/coupon",
     "pages/index/index",
     "pages/type/type",
     "pages/shopCar/shopCar",
-    "pages/my/my"
+    "pages/my/my",
+    "pages/my/coupon",
+    "pages/my/integral"
   ],
   "subPackages": [],
   "window": {
@@ -21,26 +22,26 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "iconPath": "static/images/index.png",
-        "selectedIconPath": "static/images/index.png",
+        "iconPath": "static/images/my_dfk.png",
+        "selectedIconPath": "static/images/my_dfk.png",
         "text": "首页"
       },
       {
         "pagePath": "pages/type/type",
-        "iconPath": "static/images/index.png",
-        "selectedIconPath": "static/images/index.png",
+        "iconPath": "static/images/my_dfk.png",
+        "selectedIconPath": "static/images/my_dfk.png",
         "text": "分类"
       },
       {
         "pagePath": "pages/shopCar/shopCar",
-        "iconPath": "static/images/map.png",
-        "selectedIconPath": "static/images/map.png",
+        "iconPath": "static/images/my_dfk.png",
+        "selectedIconPath": "static/images/my_dfk.png",
         "text": "购物车"
       },
       {
         "pagePath": "pages/my/my",
-        "iconPath": "static/images/world.png",
-        "selectedIconPath": "static/images/world.png",
+        "iconPath": "static/images/my_dfk.png",
+        "selectedIconPath": "static/images/my_dfk.png",
         "text": "我的"
       }
     ]

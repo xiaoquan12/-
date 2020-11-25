@@ -308,9 +308,7 @@
 					color: #373737;
 					line-height: 38rpx;
 					position: relative;
-
 				}
-
 				.redPoint {
 					position: absolute;
 					top: -10rpx;

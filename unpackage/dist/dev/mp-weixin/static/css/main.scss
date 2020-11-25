@@ -458,6 +458,11 @@ scroll-view{
 	justify-content: center;
 	align-items: center;
 }
+.flex-column-center{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
 .auto{
 	height: auto;
 }
