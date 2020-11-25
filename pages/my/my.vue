@@ -67,8 +67,8 @@
 				<view class="name">
 					我的订单
 				</view>
-				<view class="more">
-					查看更多 >
+				<view class="more access">
+					查看更多 
 				</view>
 			</view>
 
@@ -175,10 +175,10 @@
 			getphonenumber(e) {
 				console.log(e)
 			},
-			navigateTo(e){
-			
-				let url=e.currentTarget.dataset.url;
-				
+			navigateTo(e) {
+
+				let url = e.currentTarget.dataset.url;
+
 				this.$common.redirect(url)
 			}
 		}
@@ -251,11 +251,11 @@
 
 					position: relative;
 
-					
+
 					box-shadow: 0px 4px 8px 0px rgba(0, 33, 111, 0.05);
 					border-radius: 200rpx 0px 0px 200rpx;
 
-				
+
 				}
 
 				.signInCss {
@@ -357,7 +357,8 @@
 				font-weight: 400;
 				color: #999999;
 				line-height: 34rpx;
-
+				position: relative;
+				padding-right: 20rpx;
 
 			}
 
@@ -399,5 +400,23 @@
 			}
 
 		}
+	}
+
+
+	.access:after {
+		content: " ";
+		display: inline-block;
+		height: 15rpx;
+		width: 15rpx;
+		border-width: 2px 2px 0 0;
+		border-color: #bbb;
+		border-style: solid;
+		-webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+		transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+		top: -2px;
+		position: absolute;
+		top: 50%;
+		margin-top: -4px;
+		right: 2px;
 	}
 </style>
