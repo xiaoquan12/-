@@ -1,7 +1,7 @@
 <template>
 	<view>
 		<!-- 信息部分 -->
-		<view class="card">
+		<view class="card ">
 			<view class="info">
 				<view class="info_left">
 					<image class="photo" mode="aspectFill" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1606227337468&di=dd6fb5de0f05a0e111c69e2ca2afea99&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201809%2F01%2F20180901190625_wmpeq.thumb.700_0.jpeg"></image>
@@ -62,7 +62,7 @@
 		</view>
 
 		<!-- 我的订单 -->
-		<view class="module">
+		<view class="module ">
 			<view class="title flexbetween">
 				<view class="name">
 					我的订单

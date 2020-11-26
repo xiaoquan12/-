@@ -1,12 +1,12 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
-	    {
-	    	"path": "pages/index/index",
-	    	"style": {
-	    		"navigationBarTitleText": "BABICH"
-	    	}
-	    },
-		 {
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "BABICH"
+			}
+		},
+		{
 			"path": "pages/type/type",
 			"style": {}
 		}, {
@@ -36,6 +36,13 @@
 			"path": "pages/my/collection",
 			"style": {
 				"navigationBarTitleText": "我的收藏",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/my/integralOrder",
+			"style": {
+				"navigationBarTitleText": "积分订单",
 				"enablePullDownRefresh": false
 			}
 
