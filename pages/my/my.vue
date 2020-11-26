@@ -91,7 +91,7 @@
 			</view>
 
 			<view class="menus">
-				<view v-for="(item,index) in serverMenu" :key="index" class="menu">
+				<view v-for="(item,index) in serverMenu" :key="index" class="menu" :data-url="item.url" @click="navigateTo">
 					<image :src="item.img" mode="aspectFill"></image>
 					<view class="name">
 						{{item.text}}
@@ -140,7 +140,7 @@
 				serverMenu: [{
 					img: "/static/images/my_jfdd.png",
 					text: "积分订单",
-					url: ""
+					url: "/pages/my/integralOrder"
 				}, {
 					img: "/static/images/my_xxfw.png",
 					text: "消息服务",
