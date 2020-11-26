@@ -339,7 +339,7 @@
 		margin: 24rpx 32rpx;
 		background-color: white;
 		padding: 32rpx 24rpx;
-
+		border-radius: 4rpx;
 		.title {
 			font-size: 32rpx;
 			font-family: PingFangSC-Semibold, PingFang SC;
