@@ -1,6 +1,6 @@
 <!-- 展示商品组件 -->
 <template>
-	<view class="goods">
+	<view class="goods" @tap="navigateTap">
 		<view class="left">
 			<image :src="goods.image" mode="aspectFill"></image>
 		</view>
@@ -31,6 +31,10 @@
 					description: "源自法国，味道醇香",
 					price: 118
 				}
+			},
+			navigateUrl: {
+				type: String,
+				default: ""
 			}
 		},
 		data() {
@@ -40,9 +44,11 @@
 		},
 		methods: {
 
-			gotoGoodsDetail() {
-
-				this.$common.redirect('')
+			// 要跳转的路径
+			navigateTap() {
+				if (this.navigateUrl) {
+					this.$common.redirect(this.navigateUrl)
+				}
 			}
 		}
 
@@ -56,7 +62,7 @@
 		padding: 24rpx 0;
 		margin: 0 24rpx;
 		box-sizing: border-box;
-		border-bottom: 2rpx solid   #F5F5F5;
+		border-bottom: 2rpx solid #F5F5F5;
 
 	}
 
@@ -77,7 +83,7 @@
 		justify-content: space-between;
 		overflow: hidden;
 		height: 180rpx;
-		
+
 		.info {
 			display: flex;
 			flex-direction: column;
@@ -92,7 +98,7 @@
 			}
 
 			.desc {
-				
+
 				font-size: 24rpx;
 				padding-top: 8rpx;
 				color: #999999;
@@ -100,7 +106,7 @@
 		}
 
 		.unit {
-		
+
 			font-size: 24rpx;
 			font-family: PingFangSC-Semibold, PingFang SC;
 			font-weight: 600;
