@@ -44,7 +44,7 @@
 									已发货
 								</view>
 							</view>
-							<GoodsShow navigateUrl=""></GoodsShow>
+							<GoodsShow navigateUrl="/pages/order/orderDetail"></GoodsShow>
 							<view class="yfh_button flexend">
 								<button type="default">查看物流</button>
 								<button type="default">确认收货</button>
