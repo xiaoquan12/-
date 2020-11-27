@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "BABICH",
-  "usingComponents": {
-    "v-search": "/components/Search",
-    "vertical-shop": "/components/verticalShop"
-  }
-}

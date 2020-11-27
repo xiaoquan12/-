@@ -50,10 +50,16 @@
 	"subPackages": [{
 		"root": "pages/order",
 		"pages": [{
-                    "path" : "orderList",
-                    "style" : {}
-                }
-            ]
+			"path": "orderList",
+			"style": {}
+		}, {
+			"path": "orderDetail",
+			"style": {
+				"navigationBarTitleText": "订单详情",
+				"enablePullDownRefresh": false
+			}
+
+		}]
 	}],
 
 	"globalStyle": {
