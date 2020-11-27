@@ -9,7 +9,14 @@
     "pages/my/collection",
     "pages/my/integralOrder"
   ],
-  "subPackages": [],
+  "subPackages": [
+    {
+      "root": "pages/order",
+      "pages": [
+        "orderList"
+      ]
+    }
+  ],
   "window": {
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "BABICH",
@@ -50,6 +57,5 @@
   },
   "usingComponents": {
     "goods-show": "/components/GoodsShow"
-  },
-  "sitemapLocation": "sitemap18.json"
+  }
 }

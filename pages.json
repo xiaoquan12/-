@@ -49,7 +49,11 @@
 	],
 	"subPackages": [{
 		"root": "pages/order",
-		"pages": []
+		"pages": [{
+                    "path" : "orderList",
+                    "style" : {}
+                }
+            ]
 	}],
 
 	"globalStyle": {
