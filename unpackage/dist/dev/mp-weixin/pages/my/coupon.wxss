@@ -25,7 +25,7 @@
 /* 透明度 */
 /* 文章场景相关 */
 page.data-v-6671e9e6 {
-  background: #F6F6F6;
+  background: #f8f8f8;
 }
 .coupon .item.data-v-6671e9e6 {
   height: 190rpx;

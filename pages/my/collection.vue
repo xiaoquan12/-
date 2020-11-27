@@ -4,7 +4,6 @@
 			<image src="" mode="aspectFill"></image>
 			价格由市场供需决定，存在起伏，请理性消费
 		</view>
-
 		<view class="list flex-column-center">
 			<view v-for="(item,index) in [1,2,3,4]" :key="index">
 				<GoodsShow ></GoodsShow>

@@ -26,7 +26,7 @@
 			goods: {
 				type: Object,
 				default: {
-					image: "../../static/images/my_dfk.png",
+					image: "/static/images/my_dfk.png",
 					name: "VSauvignon Blanc（长相思干白白白）",
 					description: "源自法国，味道醇香",
 					price: 118
@@ -43,7 +43,6 @@
 			}
 		},
 		methods: {
-
 			// 要跳转的路径
 			navigateTap() {
 				if (this.navigateUrl) {
