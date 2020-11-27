@@ -1,6 +1,6 @@
 <!-- 展示商品组件 -->
 <template>
-	<view class="goods" @tap="navigateTap">
+	<view class="goods" @tap="navigateTap" :class="{'bottomBorder':isShowBottomBorder}">
 		<view class="left">
 			<image :src="goods.image" mode="aspectFill"></image>
 		</view>
@@ -35,6 +35,10 @@
 			navigateUrl: {
 				type: String,
 				default: ""
+			},
+			isShowBottomBorder:{
+				type:Boolean,
+				default:true
 			}
 		},
 		data() {
@@ -61,8 +65,11 @@
 		padding: 24rpx 0;
 		margin: 0 24rpx;
 		box-sizing: border-box;
-		border-bottom: 2rpx solid #F5F5F5;
+		
 
+	}
+	.bottomBorder{
+		border-bottom: 2rpx solid #F5F5F5;
 	}
 
 	.left {
