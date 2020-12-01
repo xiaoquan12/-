@@ -46,7 +46,16 @@
 			}
 
 		}
-	],
+	    ,{
+            "path" : "pages/my/history",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
 	"subPackages": [{
 		"root": "pages/order",
 		"pages": [{

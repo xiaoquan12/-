@@ -34,11 +34,11 @@
 						我的收藏
 					</view>
 				</view>
-				<view class="item">
+				<view class="item" data-url="/pages/my/history" @click="navigateTo">
 					<view class="num">
 						17
 					</view>
-					<view class="remark">
+					<view class="remark" >
 						浏览记录
 					</view>
 				</view>

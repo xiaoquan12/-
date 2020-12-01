@@ -72,8 +72,15 @@
 			</view>
 		</view>
 		<view class="yfh_button flexend">
-			<button type="default">查看物流</button>
-			<button type="default">确认收货</button>
+
+			<button type="default" v-if="orderStatus==orderClose || orderStatus==orderSuccess">删除订单</button>
+			<button type="default" v-if="orderStatus==orderPay">取消订单</button>
+			<button type="default" v-if="orderStatus==orderPay" class="bgDark">继续支付</button>
+			<button type="default" v-if="orderStatus==orderSuccess">申请售后</button>
+			<button type="default" v-if="orderStatus==orderSuccess" class="bgDark">评价</button>
+			
+			<button type="default"  v-if="orderStatus==orderToBeReceived">查看物流</button>
+			<button type="default" class="bgDark" v-if="orderStatus==orderToBeReceived">确认收货</button>
 		</view>
 	</view>
 </template>
@@ -82,7 +89,28 @@
 	export default {
 		data() {
 			return {
+				orderClose: -1, //订单关闭
+				orderPay: 0, //代付款
+				orderSuccess: 1, //交易成功
+				orderToBeDelivered:2 ,//待发货
+				orderToBeReceived:3, //待收货
+				order: {
 
+					status: 3,
+
+				}
+
+			}
+		},
+		computed: {
+			orderStatus() {
+				// -1 订单关闭
+				// 0 代付款
+				// 1 交易成功
+				//  2 代发货
+				// 3 代收货
+
+				return this.order.status
 			}
 		},
 		methods: {
@@ -238,12 +266,13 @@
 
 			line-height: 32rpx;
 			border-radius: 0 !important;
+			margin-left: 48rpx;
 		}
 
-		button:nth-child(2) {
+		.bgDark {
 			color: white;
 			background-color: #2B2C3E !important;
-			margin-left: 48rpx;
+
 		}
 	}
 </style>
