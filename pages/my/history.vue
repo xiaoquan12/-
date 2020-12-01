@@ -1,6 +1,9 @@
 <template>
 	<view>
-		
+		<view class="tip flex">
+			<image src="" mode="aspectFill"></image>
+			价格由市场供需决定，存在起伏，请理性消费
+		</view>
 	</view>
 </template>
 
@@ -8,12 +11,30 @@
 	export default {
 		data() {
 			return {
-				
+
+				list: []
 			};
 		}
 	}
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
+	.tip {
+		height: 68rpx;
+		background: #F5F5F5;
+		padding: 16rpx 32rpx;
+		box-sizing: border-box;
 
+
+		font-size: 22rpx;
+		font-family: PingFangSC;
+		color: #666666;
+		line-height: 36rpx;
+
+		image {
+			height: 21.8rpx;
+			width: 21.8rpx;
+			padding-right: 8rpx;
+		}
+	}
 </style>

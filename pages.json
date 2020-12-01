@@ -50,8 +50,7 @@
             "path" : "pages/my/history",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
+                "navigationBarTitleText": "浏览历史"
             }
             
         }
