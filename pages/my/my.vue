@@ -144,7 +144,7 @@
 				}, {
 					img: "/static/images/my_xxfw.png",
 					text: "消息服务",
-					url: ""
+					url: "/pages/my/message_server"
 				}, {
 					img: "/static/images/my_fxtg.png",
 					text: "分销推广",
