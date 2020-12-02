@@ -47,33 +47,27 @@
 				"navigationBarTitleText": "积分订单"
 			}
 
+		}, {
+			"path": "pages/my/history",
+			"style": {
+				"navigationBarTitleText": "浏览历史"
+			}
+
+		}, {
+			"path": "pages/my/message_server",
+			"style": {
+				"navigationBarTitleText": "消息服务"
+			}
+
+		}, {
+			"path": "pages/my/message_server_detail",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
 		}
-	    ,{
-            "path" : "pages/my/history",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "浏览历史"
-            }
-            
-        }
-        ,{
-            "path" : "pages/my/message_server",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "消息服务"
-            }
-            
-        }
-        ,{
-            "path" : "pages/my/message_server_detail",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-    ],
+	],
 	"subPackages": [{
 		"root": "pages/order",
 		"pages": [{
@@ -83,6 +77,13 @@
 			"path": "orderDetail",
 			"style": {
 				"navigationBarTitleText": "订单详情",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "goods_evaluate",
+			"style": {
+				"navigationBarTitleText": "商品评价",
 				"enablePullDownRefresh": false
 			}
 
