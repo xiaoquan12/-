@@ -1,6 +1,6 @@
 <template>
 	<view class="list flex-column-center">
-		<view v-for="(item,index) in [1,2,3]" :key="index" class="flex-column-center item">
+		<view v-for="(item,index) in [1,2,3]" :key="index" class="flex-column-center item" @click="gotoDetail()">
 			<view class="title">
 				订单支付成功通知
 			</view>
@@ -26,6 +26,12 @@
 			return {
 
 			};
+		},
+		methods:{
+			gotoDetail(){
+				
+				this.$common.redirect('/pages/my/message_server_detail')
+			}
 		}
 	}
 </script>
