@@ -1,7 +1,12 @@
 <template>
 	<view>
-		<view class="tip flex">
-			共{{totalCount}}条，最多为您保存30条
+		<view class="tip flex flexbetween">
+			<view class="">
+				共{{totalCount}}条，最多为您保存30条
+			</view>
+			<view @click="topEditTap">
+				{{isEdit?'编辑':'完成'}}
+			</view>
 
 		</view>
 
@@ -9,6 +14,8 @@
 			<checkbox-group @change="checkBoxChange">
 				<view class="item_wrap" v-for="(item,index) in list" :key="index">
 					<view class="date flex">
+						<radio :value="index" color="#000000" v-if="showDelete" @click="clickDate(index)">
+						</radio>
 						<view class="month">
 							{{item.month}}
 						</view>
@@ -43,8 +50,8 @@
 				</label>
 
 			</view>
-			<view class="right">
-				删除已选({{selectList.length}})
+			<view class="right" :class="{'deleteDisabled':selectList.length==0}">
+				删除已选（{{selectList.length}}）
 			</view>
 		</view>
 	</view>
@@ -56,8 +63,9 @@
 			return {
 
 				list: [],
-				showDelete: true,
-				selectList: []
+				showDelete: false,
+				selectList: [],
+				isEdit: true
 			};
 		},
 		mounted() {
@@ -65,10 +73,31 @@
 			this.getList()
 		},
 		computed: {
-			
+
 		},
 		methods: {
 
+			topEditTap() {
+
+				this.isEdit = !this.isEdit
+				this.showDelete = !this.showDelete
+
+				this.selectList = []
+
+
+			},
+			clickDate(index) {
+
+
+				let list = this.list[Number(index)].list || []
+
+
+
+				let selectList = list.map((item, ii) => `${index}-${ii}`)
+
+				this.selectList = this.selectList.concat(selectList)
+
+			},
 			// 获取浏览历史数据
 			async getList() {
 
@@ -123,10 +152,10 @@
 
 			},
 			checkBoxChange(e) {
-			
-			
 
-				this.selectList =  e.detail.value || []
+
+
+				this.selectList = e.detail.value || []
 			},
 			allSelectClick(e) {
 
@@ -135,14 +164,14 @@
 
 				let selectList = []
 
-				list.forEach((item,index) => {
-					item.list.forEach((i,ii) => {
+				list.forEach((item, index) => {
+					item.list.forEach((i, ii) => {
 
-					selectList.push(index+"-"+ii)
+						selectList.push(index + "-" + ii)
 					})
 				})
-				
-				this.selectList=selectList
+
+				this.selectList = selectList
 
 
 			}
@@ -156,11 +185,26 @@
 		background: #F5F5F5;
 		padding: 16rpx 32rpx;
 		box-sizing: border-box;
-
 		font-size: 22rpx;
 		font-family: PingFangSC;
 		color: #666666;
-		line-height: 36rpx;
+
+
+		view:nth-child(2) {
+			font-size: 28rpx;
+			font-family: PingFangSC-Semibold, PingFang SC;
+			font-weight: 600;
+			color: #2B2C3E;
+			cursor: pointer;
+		}
+
+
+	}
+
+	checkbox,
+	radio {
+
+		transform: scale(0.7);
 	}
 
 	.item_wrap {
@@ -211,10 +255,7 @@
 
 
 
-		checkbox {
 
-			transform: scale(0.7);
-		}
 
 
 
@@ -244,7 +285,7 @@
 		align-items: center;
 
 		.left {
-			flex: 5;
+			flex: 1;
 			padding: 0 32rpx;
 			box-sizing: border-box;
 
@@ -257,7 +298,7 @@
 		}
 
 		.right {
-			flex: 2.5;
+			width: 250rpx;
 			background: #2B2C3E;
 			font-size: 32rpx;
 			font-weight: 600;
@@ -266,6 +307,12 @@
 			align-items: center;
 			justify-content: center;
 			display: flex;
+		}
+
+
+		.deleteDisabled {
+			background: #2B2C3E;
+			opacity: 0.2024;
 		}
 	}
 </style>
