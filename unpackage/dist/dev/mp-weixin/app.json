@@ -7,13 +7,15 @@
     "pages/my/coupon",
     "pages/my/integral",
     "pages/my/collection",
-    "pages/my/integralOrder"
+    "pages/my/integralOrder",
+    "pages/my/history"
   ],
   "subPackages": [
     {
       "root": "pages/order",
       "pages": [
-        "orderList"
+        "orderList",
+        "orderDetail"
       ]
     }
   ],
@@ -57,5 +59,6 @@
   },
   "usingComponents": {
     "goods-show": "/components/GoodsShow"
-  }
+  },
+  "sitemapLocation": "sitemap36.json"
 }
