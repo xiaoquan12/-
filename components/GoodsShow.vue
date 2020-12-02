@@ -65,7 +65,7 @@
 		padding: 24rpx 0;
 		margin: 0 24rpx;
 		box-sizing: border-box;
-		
+		width: calc(100% - 48rpx);
 
 	}
 	.bottomBorder{

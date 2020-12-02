@@ -75,3 +75,24 @@ $uni-font-size-subtitle:36rpx;
 $uni-color-paragraph: #3F536E; // 文章段落颜色
 $uni-font-size-paragraph:30rpx;
 
+
+
+
+/* #ifdef H5 */
+	checkbox .uni-checkbox-input {
+		border-radius: 50% !important;
+		background-color: #000000;
+		color: white;
+	}
+	
+	checkbox .uni-checkbox-input .uni-checkbox-input-checked{
+		border: 1rpx solid white;
+		background-color: #000000 !important;
+		color: white !important;
+	}
+	
+	checkbox .uni-checkbox-input .uni-checkbox-input-checked:before{
+		font-size: 18rpx;
+	}
+
+	/* #endif */
