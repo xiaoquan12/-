@@ -59,19 +59,36 @@
 		view:not(first-child) {
 			padding: 0 24rpx;
 			padding-bottom: 16rpx;
-			
 			color: #666666;
 			font-size: 28rpx;
 			box-sizing: border-box;
 		}
-		
-		.payTime{
+
+		.payTime {
 			padding-bottom: 32rpx;
 			border-bottom: 1rpx solid #EEEEEE;
 		}
-		
-		.createTime{
+
+		.createTime {
 			padding: 32rpx 24rpx;
+			position: relative;
+			color: #999999;
+			font-size: 24rpx;
+		}
+
+		.createTime:before {
+			content: " ";
+			display: inline-block;
+			height: 15rpx;
+			width: 15rpx;
+			border-width: 4rpx 4rpx 0 0;
+			border-color: #999999;
+			border-style: solid;
+			transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+			position: absolute;
+			top: 50%;
+			margin-top: -4px;
+			right: 32rpx;
 		}
 	}
 </style>

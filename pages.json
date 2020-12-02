@@ -64,6 +64,15 @@
             }
             
         }
+        ,{
+            "path" : "pages/my/message_server_detail",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
 	"subPackages": [{
 		"root": "pages/order",
