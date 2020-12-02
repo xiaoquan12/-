@@ -21,7 +21,7 @@
 							<!-- <radio :value="index + '-'+ii" color="#000000" v-if="showDelete" :checked="item.checked">
 							</radio> -->
 							<label>
-								<checkbox :value="index + '-'+ii"  class="checkbox" v-if="showDelete" :checked="item.checked" />
+								<checkbox :value="index + '-'+ii" class="checkbox" v-if="showDelete" :checked="selectList.includes(index + '-'+ii)" />
 							</label>
 							<GoodsShow></GoodsShow>
 
@@ -44,7 +44,7 @@
 
 			</view>
 			<view class="right">
-				删除已选({{getSelectCount}})
+				删除已选({{selectList.length}})
 			</view>
 		</view>
 	</view>
@@ -56,7 +56,8 @@
 			return {
 
 				list: [],
-				showDelete: true
+				showDelete: true,
+				selectList: []
 			};
 		},
 		mounted() {
@@ -64,19 +65,7 @@
 			this.getList()
 		},
 		computed: {
-			getSelectCount() {
-				let count = 0
-				let list = this.list.reduce((pre, item) => {
-
-					return pre.concat(item.list)
-				}, [])
-
-
-
-
-				return list.filter(item => item.checked).length
-
-			}
+			
 		},
 		methods: {
 
@@ -134,22 +123,28 @@
 
 			},
 			checkBoxChange(e) {
-				console.log(e)
+			
+			
+
+				this.selectList =  e.detail.value || []
 			},
 			allSelectClick(e) {
 
 				let list = this.list;
 
 
-				list.forEach(item => {
-					item.list.forEach(i => {
-						i.checked = true
+				let selectList = []
+
+				list.forEach((item,index) => {
+					item.list.forEach((i,ii) => {
+
+					selectList.push(index+"-"+ii)
 					})
 				})
+				
+				this.selectList=selectList
 
-				console.log(list)
 
-				this.list = list
 			}
 		}
 	}
@@ -214,7 +209,7 @@
 		width: 100%;
 		box-sizing: border-box;
 
-		
+
 
 		checkbox {
 
@@ -224,27 +219,8 @@
 
 
 	}
-	
-	/* #ifdef H5 */
-	// checkbox .uni-checkbox-input {
-	// 	border-radius: 50% !important;
-	// 	background-color: white;
-	// 	color: white;
-	// }
-	
-	// checkbox .uni-checkbox-input-checked {
-	// 	border: 1rpx solid white;
-	// 	background-color: red !important;
-	// 	color: white !important;
-	// }
-	
-	// checkbox .uni-checkbox-input .uni-checkbox-input-checked:before {
-	// 	font-size: 18rpx;
-	// }
-	
-	/* #endif */
 
-	
+
 
 	.nomore {
 

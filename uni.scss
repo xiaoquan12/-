@@ -79,20 +79,26 @@ $orange:#FF7F7F;
 
 
 
-/* #ifdef H5 */
+
+	/* #ifdef H5 */
 	checkbox .uni-checkbox-input {
 		border-radius: 50% !important;
-		background-color: #000000;
-		color: white;
+		background-color: white;
+		color: #ffffff !important;
 	}
+
+	// checkbox .uni-checkbox-input.uni-checkboxÏ-input-checked {
+	// 	border: 1rpx solid white;
+	// 	background-color: red !important;
+	// 	color: white !important;
+	// }
 	
-	checkbox .uni-checkbox-input .uni-checkbox-input-checked{
-		border: 1rpx solid white;
-		background-color: #000000 !important;
-		color: white !important;
+	uni-checkbox .uni-checkbox-input.uni-checkbox-input-checked {
+			color: #fff;
+			background:#000000
 	}
-	
-	checkbox .uni-checkbox-input .uni-checkbox-input-checked:before{
+
+	checkbox .uni-checkbox-input .uni-checkbox-input-checked:before {
 		font-size: 18rpx;
 	}
 
