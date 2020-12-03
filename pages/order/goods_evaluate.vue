@@ -8,7 +8,7 @@
 				</view>
 				<view class="flex">
 					<image class="xingxing" :src="starCount<=(index)?'../../static/images/icon_kongxinxing@2x.png':'../../static/images/icon_onexing@2x.png'"
-					 mode="aspectFit" v-for="(item,index) in 5" :key="index"></image>
+					 mode="aspectFit" v-for="(item,index) in 5" :key="index" @click="selectStar(index)"></image>
 				</view>
 			</view>
 		</view>
@@ -24,7 +24,7 @@
 			<image src="../../static/images/add_image.png" mode="" v-if="imgList.length<6" mode="aspectFill"></image>
 		</view>
 		<view class="btn_wrap p32">
-			<button type="default">发布评价</button>
+			<button type="default" >发布评价</button>
 		</view>
 	</view>
 </template>
@@ -39,12 +39,14 @@
 			}
 		},
 		methods: {
-		
+			selectStar(index){
+				this.starCount=index+1
+			}
 		}
 	}
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 	.goods {
 
 		font-size: 28rpx;
@@ -115,16 +117,20 @@
 	}
 	.btn_wrap{
 		
-		button{
-			color: #FFFFFF;
-			border-radius: 0;
-		}
 		
-		button:after{
-			border-radius: 0;
-			color: #FFFFFF;
-			background-color: #2B2C3E;
-		}
 	
+	}
+	
+	button{
+		color: white;
+		border-radius: 0;
+		z-index: 1;
+	}
+	
+	button:after{
+		border-radius: 0;
+		color: #FFFFFF;
+		background-color: #2B2C3E;
+		z-index: -1;
 	}
 </style>
