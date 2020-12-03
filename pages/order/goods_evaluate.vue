@@ -16,7 +16,13 @@
 			<textarea v-model="evaluate" maxlength="500" placeholder-style="color: #AAAAAA;font-size:28rpx" placeholder="写下你对产品的心得～" />
 			<text class="count">{{evaluate.length}}/500</text>
 		</view>
-		
+		<view class="images">
+				<view class="relative" v-for="(item,index) in imgList" :key="index">
+					<image class="img" :src="item" mode="aspectFill"></image>
+					<image class="delete" src="../../static/images/icon_shanchuh@2x.png" mode="aspectFill"></image>
+				</view>
+			<image src="../../static/images/add_image.png" mode="" v-if="imgList.length<6" mode="aspectFill"></image>
+		</view>
 		<view class="btn_wrap p32">
 			<button type="default">发布评价</button>
 		</view>
@@ -28,11 +34,12 @@
 		data() {
 			return {
 				starCount: 1,
-				evaluate: ""
+				evaluate: "",
+				imgList:['../../static/images/jiu.png']
 			}
 		},
 		methods: {
-
+		
 		}
 	}
 </script>
@@ -81,17 +88,41 @@
 			font-size: 22rpx;
 		}
 	}
+	
+		
+	.images{
+		padding: 32rpx;
+		display: flex;
+		flex-wrap: wrap;
+		image{
+			padding-left: 40rpx;
+			height: 144rpx;
+			width: 144rpx;
+		}
+		
+		image:first-child{
+			padding-left: 0;
+		}
+		
+		.delete{
+			width: 26rpx;
+			height: 26rpx;
+			position: absolute;
+			right: -13rpx;
+			top: -13rpx;
+			cursor: pointer;
+		}
+	}
 	.btn_wrap{
 		
 		button{
-			// color: white;
-			// border-radius: 0;
-			
+			color: #FFFFFF;
+			border-radius: 0;
 		}
 		
 		button:after{
 			border-radius: 0;
-			color: #222222;
+			color: #FFFFFF;
 			background-color: #2B2C3E;
 		}
 	
