@@ -84,13 +84,14 @@
 	.btn_wrap{
 		
 		button{
-			color: white;
-			border-radius: 0;
+			// color: white;
+			// border-radius: 0;
+			
 		}
 		
 		button:after{
 			border-radius: 0;
-			color: white;
+			color: #222222;
 			background-color: #2B2C3E;
 		}
 	
