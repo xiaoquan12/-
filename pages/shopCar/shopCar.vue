@@ -3,21 +3,21 @@
 		<view class="address">
 			<image class='addressIcon floatL relative marL40' src="../../static/images/my_dfk.png" mode="widthFix"></image>
 			<view class="addressText floatL marL10">北京市朝阳区来广营帝维系咖啡</view>
-			<view class="addressButton floatR marR30">
+			<view class="addressButton floatR marR30" @click='editShop'>
 				{{isEdit?"完成":"编辑"}}
 			</view>
 		</view>
 	    <view class='shopSon flex-verCenter' :class="{'marT20':index==0}" v-for="(item,index) in shopList" :key="index">
-			<view class="chooseShop flex-alcenter">
-				<image src="../../static/images/my_dfk.png" class='chooseIcon' mode="widthFix"></image>
+			<view class="chooseShop flex-alcenter" @click='chooseShops(item,index)'>
+				<image src="../../static/images/my_dfk.png" v-show='item.isChoose' class='chooseIcon' mode="widthFix"></image>
 			</view>
 	    	<rowShop :config='config'></rowShop>
 	    </view>
 		<view class="buyView flex-verCenter">
-			<view class="chooseShop flex-alcenter">
-				<image src="../../static/images/my_dfk.png" class='chooseIcon' mode="widthFix"></image>
+			<view class="chooseShop flex-alcenter" @click='chooseAll'>
+				<image src="../../static/images/my_dfk.png" v-show='isChooseAll' class='chooseIcon' mode="widthFix"></image>
 			</view>
-			<view class="chooseText marL10">
+			<view class="chooseText marL10" @click='chooseAll'>
 				全选
 			</view>
 			<view class="hejiText" v-show='!isEdit'>
@@ -42,10 +42,13 @@
 		data() {
 			return {
 				isEdit:false,
+				isChooseAll:false,
 				shopList:[{
-					
+					isChoose:false,
+					id:0
 				},{
-					
+					isChoose:false,
+					id:1
 				}],
 				config:{
 					width:650,
@@ -54,7 +57,39 @@
 					imgHeight:200,
 					isAddNum:true
 				},
+				chooseList:[]
 			};
+		},
+		methods:{
+			chooseAll(){
+				this.isChooseAll=!this.isChooseAll;
+				if(this.isChooseAll){
+				    this.shopList.forEach((item,index)=>{
+						item.isChoose=true;
+					     this.chooseList.push(item);
+					})
+				}else{
+					this.shopList.forEach((item,index)=>{
+						item.isChoose=false;
+					     this.chooseList.splice(index,1);
+					})
+				}
+			},
+			chooseShops(item,index){
+				this.shopList[index].isChoose=!this.shopList[index].isChoose;
+			    if(this.shopList[index].isChoose){
+					this.chooseList.push(this.shopList[index])
+				}else{
+				    const findIndex=this.chooseList.findIndex(item=>{
+						return item.id==this.shopList[index].id;
+					})
+					this.chooseList.splice(findIndex,1);
+				}
+				console.log("this.chooseList",this.chooseList);
+			},
+			editShop(){
+				this.isEdit=!this.isEdit;
+			}
 		}
 	}
 </script>
@@ -135,6 +170,7 @@
 		font-weight: 600;
 		color: #FFFFFF;
 	}
+	
 	.shopSon{
 		width: 750rpx;
 		background-color: #ffffff;

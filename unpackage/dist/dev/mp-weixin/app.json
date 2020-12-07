@@ -8,14 +8,17 @@
     "pages/my/integral",
     "pages/my/collection",
     "pages/my/integralOrder",
-    "pages/my/history"
+    "pages/my/history",
+    "pages/my/message_server",
+    "pages/my/message_server_detail"
   ],
   "subPackages": [
     {
       "root": "pages/order",
       "pages": [
         "orderList",
-        "orderDetail"
+        "orderDetail",
+        "goods_evaluate"
       ]
     }
   ],
@@ -60,5 +63,5 @@
   "usingComponents": {
     "goods-show": "/components/GoodsShow"
   },
-  "sitemapLocation": "sitemap36.json"
+  "sitemapLocation": "sitemap39.json"
 }

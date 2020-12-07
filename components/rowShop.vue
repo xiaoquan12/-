@@ -16,13 +16,13 @@
 					+
 				</view>
 				<view class="shopButtomRight flex-verCenter" v-if='config.isAddNum'>
-					<view class="shopNumButton flex-allcenter">
+					<view class="shopNumButton flex-allcenter" @click='subNum'>
 					     -
 					</view>
 					<view class="shopNum">
-					     1
+					     {{buyNum}}
 					</view>
-					<view class="shopNumButton flex-allcenter">
+					<view class="shopNumButton flex-allcenter" @click='addNum'>
 					     +
 					</view>
 				</view>
@@ -39,8 +39,20 @@
 		},
 		data() {
 			return {
-				
+				buyNum:1
 			};
+		},
+		methods:{
+			addNum(){
+				this.buyNum +=1;
+				this.$emit("add", this.buyNum)
+			},
+			subNum(){
+				if(this.buyNum!=1){
+					this.buyNum -=1;
+				    this.$emit("sub", this.buyNum)
+				}
+			}
 		}
 	}
 </script>
