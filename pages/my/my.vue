@@ -135,7 +135,7 @@
 				}, {
 					img: "/static/images/my_tk.png",
 					text: "退款",
-					url: "/pages/order/orderList?tabIndex=4"
+					url: "/pages/order/goods_after_sale?tabIndex=4"
 				}],
 				serverMenu: [{
 					img: "/static/images/my_jfdd.png",
@@ -178,7 +178,7 @@
 			navigateTo(e) {
 
 				let url = e.currentTarget.dataset.url;
-				console.log(url)
+				
 				this.$common.redirect(url)
 			},
 			seeMoreOrderTap(){
