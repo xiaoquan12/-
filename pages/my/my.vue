@@ -63,7 +63,7 @@
 
 		<!-- 我的订单 -->
 		<view class="module ">
-			<view class="title flexbetween" data-url="/pages/order/orderList" @click="navigateTo">
+			<view class="title flexbetween" data-url="/pages/order/orderList" @tap="navigateTo">
 				<view class="name">
 					我的订单
 				</view>
@@ -73,7 +73,7 @@
 			</view>
 
 			<view class="menus">
-				<view v-for="(item,index) in orderMenu" :key="index" class="menu">
+				<view v-for="(item,index) in orderMenu" :key="index" class="menu" :data-url="item.url" @tap="navigateTo">
 					<image :src="item.img" mode="aspectFill"></image>
 					<view class="name">
 						{{item.text}}
@@ -91,7 +91,7 @@
 			</view>
 
 			<view class="menus">
-				<view v-for="(item,index) in serverMenu" :key="index" class="menu" :data-url="item.url" @click="navigateTo">
+				<view v-for="(item,index) in serverMenu" :key="index" class="menu" :data-url="item.url" @tap="navigateTo">
 					<image :src="item.img" mode="aspectFill"></image>
 					<view class="name">
 						{{item.text}}
@@ -127,15 +127,15 @@
 				orderMenu: [{
 					img: "/static/images/my_dfk.png",
 					text: "待付款",
-					url: ""
+					url: "/pages/order/orderList?tabIndex=1"
 				}, {
 					img: "/static/images/my_yzf.png",
 					text: "已支付",
-					url: ""
+					url: "/pages/order/orderList?tabIndex=2"
 				}, {
 					img: "/static/images/my_tk.png",
 					text: "退款",
-					url: ""
+					url: "/pages/order/orderList?tabIndex=4"
 				}],
 				serverMenu: [{
 					img: "/static/images/my_jfdd.png",
@@ -178,7 +178,7 @@
 			navigateTo(e) {
 
 				let url = e.currentTarget.dataset.url;
-
+				console.log(url)
 				this.$common.redirect(url)
 			},
 			seeMoreOrderTap(){

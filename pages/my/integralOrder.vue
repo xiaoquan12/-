@@ -2,80 +2,65 @@
 <template>
 	<view class="inegralOrder">
 		<view class="nav">
-			<view :class="[navIndex==0?'select':'']" @tap="navIndex=0">
+			<view :class="getSelectTabCss(0)" @tap="navIndex=0">
 				未发货
 			</view>
-			<view :class="[navIndex==1?'select':'']" @tap="navIndex=1">
+			<view :class="getSelectTabCss(1)" @tap="navIndex=1">
 				已发货
 			</view>
-			<view :class="[navIndex==2?'select':'']" @tap="navIndex=2">
+			<view :class="getSelectTabCss(2)" @tap="navIndex=2">
 				已签收
 			</view>
 		</view>
 
-		<swiper :indicator-dots="false" :autoplay="false" :interval="3000" :duration="1000" :current="navIndex" @change="swiperChange"
-		 style="height:calc(100vh - 66rpx)">
-			<swiper-item>
-				<scroll-view scroll-y="true" style="height:100%">
-					<view class="list">
-						<view v-for="(item,index) in [1,2,3]" :key="index" class="item">
-							<view class="order_info flexbetween">
-								<view class="code">
-									订单编号：202005081325283003
-								</view>
-								<view class="type">
-									等待卖家发货
-								</view>
-							</view>
-							<GoodsShow navigateUrl=""></GoodsShow>
-						</view>
+		<view class="list" v-if="isShowTabContent(0)">
+			<view v-for="(item,index) in [1,2,3]" :key="index" class="item">
+				<view class="order_info flexbetween">
+					<view class="code">
+						订单编号：202005081325283003
 					</view>
-				</scroll-view>
-			</swiper-item>
-			<swiper-item>
-				<scroll-view scroll-y="true" style="height:100%">
-					<view class="list">
-						<view v-for="(item,index) in [1,2,3]" :key="index" class="item">
-							<view class="order_info flexbetween">
-								<view class="code">
-									订单编号：202005081325283003
-								</view>
-								<view class="type">
-									已发货
-								</view>
-							</view>
-							<GoodsShow navigateUrl="/pages/order/orderDetail"></GoodsShow>
-							<view class="yfh_button flexend">
-								<button type="default">查看物流</button>
-								<button type="default">确认收货</button>
-							</view>
-						</view>
+					<view class="type">
+						等待卖家发货
 					</view>
-				</scroll-view>
-			</swiper-item>
-			<swiper-item>
-				<scroll-view scroll-y="true" style="height:100%">
-					<view class="list">
-						<view v-for="(item,index) in [1,2,3]" :key="index" class="item">
-							<view class="order_info flexbetween">
-								<view class="code">
-									订单编号：202005081325283003
-								</view>
-								<view class="type">
-									已签收
-								</view>
-							</view>
-							<GoodsShow navigateUrl=""></GoodsShow>
+				</view>
+				<GoodsShow navigateUrl=""></GoodsShow>
+			</view>
+		</view>
+		<view class="list" v-if="isShowTabContent(1)">
+			<view v-for="(item,index) in [1,2,3]" :key="index" class="item">
+				<view class="order_info flexbetween">
+					<view class="code">
+						订单编号：202005081325283003
+					</view>
+					<view class="type">
+						已发货
+					</view>
+				</view>
+				<GoodsShow navigateUrl="/pages/order/orderDetail"></GoodsShow>
+				<view class="yfh_button flexend">
+					<button type="default">查看物流</button>
+					<button type="default">确认收货</button>
+				</view>
+			</view>
+		</view>
+		<view class="list" v-if="isShowTabContent(2)">
+			<view v-for="(item,index) in [1,2,3]" :key="index" class="item">
+				<view class="order_info flexbetween">
+					<view class="code">
+						订单编号：202005081325283003
+					</view>
+					<view class="type">
+						已签收
+					</view>
+				</view>
+				<GoodsShow navigateUrl=""></GoodsShow>
 
-							<view class="yfh_button flexend">
-								<button type="default">删除订单</button>
-								<button type="default">评价</button>
-							</view>
-						</view>
-					</view>
-				</scroll-view>
-			</swiper-item>
-		</swiper>
+				<view class="yfh_button flexend">
+					<button type="default">删除订单</button>
+					<button type="default">评价</button>
+				</view>
+			</view>
+		</view>
 	</view>
 
 
@@ -88,6 +73,20 @@
 
 				navIndex: 0
 			};
+		},
+		computed: {
+			getSelectTabCss() {
+				return function(index) {
+		
+					return this.navIndex == index ? "select" : ""
+		
+				}
+			},
+			isShowTabContent() {
+				return function(index) {
+					return this.navIndex == index
+				}
+			}
 		},
 		methods: {
 			swiperChange(e) {
@@ -135,12 +134,12 @@
 		height: 4rpx;
 		background: #000000;
 		bottom: 0;
-		left: 45%;
-		right: 45%;
+		left: 42%;
+		right: 42%;
 	}
 
 
-	swiper {
+	.list {
 		padding-top: 66rpx;
 		box-sizing: border-box;
 	}
