@@ -107,6 +107,24 @@
                 }
                 
                 }
+                ,{
+                    "path" : "exchangeGoods",
+                    "style" :                                                                                    
+                {
+                    "navigationBarTitleText": "换货",
+                    "enablePullDownRefresh": false
+                }
+                
+                }
+                ,{
+                    "path" : "returnGoods",
+                    "style" :                                                                                    
+                {
+                    "navigationBarTitleText": "退货",
+                    "enablePullDownRefresh": false
+                }
+                
+                }
             ]
 	}],
 
