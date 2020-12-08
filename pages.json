@@ -98,6 +98,15 @@
                 }
                 
                 }
+                ,{
+                    "path" : "select_after_sale_type",
+                    "style" :                                                                                    
+                {
+                    "navigationBarTitleText": "选择售后类型",
+                    "enablePullDownRefresh": false
+                }
+                
+                }
             ]
 	}],
 
