@@ -21,7 +21,7 @@
 					<image class="img" :src="item" mode="aspectFill"></image>
 					<image class="delete" src="../../static/images/icon_shanchuh@2x.png" mode="aspectFill"></image>
 				</view>
-			<image src="../../static/images/add_image.png" mode="" v-if="imgList.length<6" mode="aspectFill"></image>
+			<image src="../../static/images/add_image.png" mode="" v-if="imgList.length<maxImagesCount" mode="aspectFill" @click="chooseImages"></image>
 		</view>
 		<view class="btn_wrap p32">
 			<button type="default" >发布评价</button>
@@ -35,12 +35,23 @@
 			return {
 				starCount: 1,
 				evaluate: "",
-				imgList:['../../static/images/jiu.png']
+				imgList:['../../static/images/jiu.png'],
+				maxImagesCount:6
 			}
 		},
 		methods: {
 			selectStar(index){
 				this.starCount=index+1
+			},
+			chooseImages(){
+				
+				uni.chooseImage({
+					count:this.maxImagesCount-this.imgList.length,
+					
+					success:res=>{
+						console.log(res)
+					}
+				})
 			}
 		}
 	}
