@@ -1,33 +1,7 @@
 <template>
 	<view>
-		<view class="goods">
-			<view class="left">
-				<image src="../../static/images/jiu.png" mode="widthFix" class="goods_img"></image>
-			</view>
-			<view class="right flex-column-center">
-				<view class="title">
-					Vintara Red（干红/13度）百琪干红葡萄酒750ML/13度
-				</view>
-				<view class="props flex">
-					<view class="item flex">
-						<view class="title">
-							单价：
-						</view>
-						<view class="">
-							118
-						</view>
-					</view>
-					<view class="item flex">
-						<view class="title">
-							数量：
-						</view>
-						<view class="">
-							1
-						</view>
-					</view>
-				</view>
-			</view>
-		</view>
+		
+		<AfterSaleGoods :isShowSelectNum="false" :goods="{}"></AfterSaleGoods>
 
 		<view class="content">
 			<view class="item">
@@ -72,7 +46,11 @@
 </template>
 
 <script>
+	import AfterSaleGoods from '../../components/afterSaleGoods.vue'
 	export default {
+		components:{
+			AfterSaleGoods
+		},
 		data() {
 			return {
 
@@ -86,47 +64,7 @@
 		background-color: #F6F6F6;
 	}
 
-	.goods {
-		background: #FFFFFF;
-		padding: 42rpx 32rpx 32rpx;
-		box-sizing: border-box;
-		display: flex;
-		align-items: center;
-
-		.goods_img {
-			width: 112rpx;
-			height: 112rpx;
-		}
-
-		.right {
-			padding-left: 13rpx;
-			box-sizing: border-box;
-			display: flex;
-			height: 112rpx;
-
-			.title {
-				font-size: 24rpx;
-				color: #333333;
-			}
-
-			.props {
-				font-size: 24rpx;
-
-				.item {
-					align-items: center;
-
-					.title {
-						color: #999999;
-					}
-
-				}
-
-				.item:nth-child(2) {
-					padding-left: 62rpx;
-				}
-			}
-		}
-	}
+	
 
 	.content {
 		margin: 48rpx;
