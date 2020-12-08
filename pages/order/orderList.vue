@@ -1,19 +1,19 @@
 <template>
 	<view>
 		<view class="nav">
-			<view :class="getSelectTabCss(0)" @tap="navIndex=0">
+			<view :class="{'select':isShowTabContent(0)}" @tap="navIndex=0">
 				全部
 			</view>
-			<view :class="getSelectTabCss(1)" @tap="navIndex=1">
+			<view :class="{'select':isShowTabContent(1)}" @tap="navIndex=1">
 				待付款
 			</view>
-			<view :class="getSelectTabCss(2)" @tap="navIndex=2">
+			<view :class="{'select':isShowTabContent(2)}" @tap="navIndex=2">
 				待发货
 			</view>
-			<view :class="getSelectTabCss(3)" @tap="navIndex=3">
+			<view :class="{'select':isShowTabContent(3)}" @tap="navIndex=3">
 				待收货
 			</view>
-			<view :class="getSelectTabCss(4)" @tap="navIndex=4">
+			<view :class="{'select':isShowTabContent(4)}" @tap="navIndex=4">
 				已完成
 			</view>
 		</view>
@@ -116,13 +116,13 @@
 			};
 		},
 		computed: {
-			getSelectTabCss() {
-				return function(index) {
+			// getSelectTabCss() {
+			// 	return function(index) {
 
-					return this.navIndex == index ? "select" : ""
+			// 		return this.navIndex == index ? "select" : ""
 
-				}
-			},
+			// 	}
+			// },
 			isShowTabContent() {
 				return function(index) {
 					return this.navIndex == index
@@ -158,7 +158,7 @@
 		onLoad(options) {
 
 			this.navIndex = options.tabIndex || 0
-		
+
 		},
 
 	}

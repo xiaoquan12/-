@@ -2,19 +2,19 @@
 <template>
 	<view>
 		<view class="nav">
-			<view :class="getSelectTabCss(0)" @tap="navIndex=0">
+			<view :class="{'select':isShowTabContent(0)}" @tap="navIndex=0">
 				全部
 			</view>
-			<view :class="getSelectTabCss(1)" @tap="navIndex=1">
+			<view :class="{'select':isShowTabContent(1)}" @tap="navIndex=1">
 				待审核
 			</view>
-			<view :class="getSelectTabCss(2)" @tap="navIndex=2">
+			<view :class="{'select':isShowTabContent(2)}" @tap="navIndex=2">
 				已驳回
 			</view>
-			<view :class="getSelectTabCss(3)" @tap="navIndex=3">
+			<view :class="{'select':isShowTabContent(3)}" @tap="navIndex=3">
 				处理中
 			</view>
-			<view :class="getSelectTabCss(4)" @tap="navIndex=4">
+			<view :class="{'select':isShowTabContent(4)}" @tap="navIndex=4">
 				已退款
 			</view>
 		</view>

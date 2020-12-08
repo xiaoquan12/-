@@ -18,7 +18,12 @@
       "pages": [
         "orderList",
         "orderDetail",
-        "goods_evaluate"
+        "goods_evaluate",
+        "goods_after_sale",
+        "select_after_sale_type",
+        "exchangeGoods",
+        "returnGoods",
+        "afterSaleSubmitSuccess"
       ]
     }
   ],
@@ -29,8 +34,8 @@
     "backgroundColor": "#ffffff"
   },
   "tabBar": {
-    "color": "#ffffff",
-    "selectedColor": "#b3b6bb",
+    "color": "#b3b6bb",
+    "selectedColor": "#ffffff",
     "borderStyle": "black",
     "backgroundColor": "#1c1c1c",
     "list": [
@@ -63,5 +68,5 @@
   "usingComponents": {
     "goods-show": "/components/GoodsShow"
   },
-  "sitemapLocation": "sitemap39.json"
+  "sitemapLocation": "sitemap.json"
 }

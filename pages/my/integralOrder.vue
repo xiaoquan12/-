@@ -2,13 +2,13 @@
 <template>
 	<view class="inegralOrder">
 		<view class="nav">
-			<view :class="getSelectTabCss(0)" @tap="navIndex=0">
+			<view :class="{'select':isShowTabContent(0)}" @tap="navIndex=0">
 				未发货
 			</view>
-			<view :class="getSelectTabCss(1)" @tap="navIndex=1">
+			<view :class="{'select':isShowTabContent(1)}" @tap="navIndex=1">
 				已发货
 			</view>
-			<view :class="getSelectTabCss(2)" @tap="navIndex=2">
+			<view :class="{'select':isShowTabContent(2)}" @tap="navIndex=2">
 				已签收
 			</view>
 		</view>
