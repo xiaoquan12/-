@@ -125,6 +125,15 @@
                 }
                 
                 }
+                ,{
+                    "path" : "afterSaleSubmitSuccess",
+                    "style" :                                                                                    
+                {
+                    "navigationBarTitleText": "",
+                    "enablePullDownRefresh": false
+                }
+                
+                }
             ]
 	}],
 
