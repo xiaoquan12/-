@@ -89,7 +89,16 @@
 				"enablePullDownRefresh": false
 			}
 
-		}]
+		}    ,{
+                    "path" : "goods_after_sale",
+                    "style" :                                                                                    
+                {
+                    "navigationBarTitleText": "商品售后",
+                    "enablePullDownRefresh": false
+                }
+                
+                }
+            ]
 	}],
 
 	"globalStyle": {
