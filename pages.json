@@ -72,7 +72,9 @@
 		"root": "pages/order",
 		"pages": [{
 			"path": "orderList",
-			"style": {}
+			"style": {
+				"navigationBarTitleText":"我的订单"
+			}
 		}, {
 			"path": "orderDetail",
 			"style": {

@@ -63,11 +63,11 @@
 
 		<!-- 我的订单 -->
 		<view class="module ">
-			<view class="title flexbetween">
+			<view class="title flexbetween" data-url="/pages/order/orderList" @click="navigateTo">
 				<view class="name">
 					我的订单
 				</view>
-				<view class="more access">
+				<view class="more access" >
 					查看更多 
 				</view>
 			</view>
@@ -180,6 +180,10 @@
 				let url = e.currentTarget.dataset.url;
 
 				this.$common.redirect(url)
+			},
+			seeMoreOrderTap(){
+				
+				
 			}
 		}
 	}
@@ -248,10 +252,7 @@
 					line-height: 66rpx;
 					text-align: center;
 					transform: translateX(32rpx);
-
 					position: relative;
-
-
 					box-shadow: 0px 4px 8px 0px rgba(0, 33, 111, 0.05);
 					border-radius: 200rpx 0px 0px 200rpx;
 
