@@ -134,6 +134,15 @@
                 }
                 
                 }
+                ,{
+                    "path" : "logisticsDetails",
+                    "style" :                                                                                    
+                {
+                    "navigationBarTitleText": "物流详情",
+                    "enablePullDownRefresh": false
+                }
+                
+                }
             ]
 	}],
 
