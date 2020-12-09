@@ -20,7 +20,7 @@
 		</view>
 		<view class="list">
 			<view class="" v-if="isShowTabContent(0)">
-				<view v-for="(item,index) in [1,2,3]" :key="index" class="item">
+				<view v-for="(item,index) in [1,2,3]" :key="index" class="item bgWhite">
 					<view class="order_info flexbetween">
 						<view class="code">
 							订单编号：202005081325283003
@@ -37,7 +37,7 @@
 				</view>
 			</view>
 			<view class="" v-if="isShowTabContent(1)">
-				<view v-for="(item,index) in [1,2,3]" :key="index" class="item">
+				<view v-for="(item,index) in [1,2,3]" :key="index" class="item bgWhite">
 					<view class="order_info flexbetween">
 						<view class="code">
 							订单编号：202005081325283003
@@ -54,7 +54,7 @@
 				</view>
 			</view>
 			<view class="" v-if="isShowTabContent(2)">
-				<view v-for="(item,index) in [1,2,3]" :key="index" class="item">
+				<view v-for="(item,index) in [1,2,3]" :key="index" class="item bgWhite">
 					<view class="order_info flexbetween">
 						<view class="code">
 							订单编号：202005081325283003
@@ -71,7 +71,7 @@
 				</view>
 			</view>
 			<view class="" v-if="isShowTabContent(3)">
-				<view v-for="(item,index) in [1,2,3]" :key="index" class="item">
+				<view v-for="(item,index) in [1,2,3]" :key="index" class="item bgWhite">
 					<view class="order_info flexbetween">
 						<view class="code">
 							订单编号：202005081325283003
@@ -88,7 +88,7 @@
 				</view>
 			</view>
 			<view class="" v-if="isShowTabContent(4)">
-				<view v-for="(item,index) in [1,2,3]" :key="index" class="item">
+				<view v-for="(item,index) in [1,2,3]" :key="index" class="item bgWhite">
 					<view class="order_info flexbetween">
 						<view class="code">
 							订单编号：202005081325283003

@@ -3,10 +3,10 @@
 		<!-- 信息部分 -->
 		<view class="card ">
 			<view class="info">
-				<view class="info_left">
-					<image class="photo" mode="aspectFill" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1606227337468&di=dd6fb5de0f05a0e111c69e2ca2afea99&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201809%2F01%2F20180901190625_wmpeq.thumb.700_0.jpeg"></image>
-					<view class="flex-column-center">
-						<view class="name">
+				<view class="info_left" >
+					<image class="photo" mode="aspectFill" data-url="/pages/my/personData" @tap="navigateTo" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1606227337468&di=dd6fb5de0f05a0e111c69e2ca2afea99&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201809%2F01%2F20180901190625_wmpeq.thumb.700_0.jpeg"></image>
+					<view class="flex-column-center" >
+						<view class="name" data-url="/pages/my/personData" @tap="navigateTo">
 							哈哈哈
 						</view>
 						<view class="bindPhone">
@@ -108,7 +108,7 @@
 				</view>
 			</view>
 			<view class="menus system">
-				<view v-for="(item,index) in systemMenu" :key="index" class="menu">
+				<view v-for="(item,index) in systemMenu" :key="index" class="menu" :data-url="item.url" @tap="navigateTo">
 					<image :src="item.img" mode="aspectFill"></image>
 					<view class="name">
 						{{item.text}}
@@ -165,7 +165,7 @@
 				}, {
 					img: "/static/images/my_wdsz.png",
 					text: "我的设置",
-					url: ""
+					url: "/pages/my/mySetting"
 				}],
 				isShowCollectionRedPoint: true, //收藏小红点
 				isSignIn: false, //是否签到

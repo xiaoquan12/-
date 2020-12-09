@@ -1,10 +1,12 @@
 <template>
 	<view>
-		
-		<AfterSaleGoods :isShowSelectNum="false" :goods="{}"></AfterSaleGoods>
+
+		<view class="goods_wrap">
+			<AfterSaleGoods :isShowSelectNum="false" :goods="{}"></AfterSaleGoods>
+		</view>
 
 		<view class="content">
-			<view class="item">
+			<view class="item" data-url="/pages/afterSale/returnGoods" @tap="navigateTo">
 				<view class="title">
 					<image src="../../static/images/tuihuo.png" mode="aspectFill"></image>
 					<view class="txt">
@@ -24,7 +26,7 @@
 				</view>
 
 			</view>
-			<view class="item">
+			<view class="item" data-url="/pages/afterSale/exchangeGoods" @tap="navigateTo">
 				<view class="title">
 					<image src="../../static/images/huanhuo.png" mode="aspectFill"></image>
 					<view class="txt">
@@ -48,13 +50,20 @@
 <script>
 	import AfterSaleGoods from '../../components/afterSaleGoods.vue'
 	export default {
-		components:{
+		components: {
 			AfterSaleGoods
 		},
 		data() {
 			return {
 
 			};
+		},
+		methods: {
+			navigateTo(e) {
+				let url = e.currentTarget.dataset.url;
+
+				this.$common.redirect(url)
+			}
 		}
 	}
 </script>
@@ -64,17 +73,23 @@
 		background-color: #F6F6F6;
 	}
 
-	
+	.goods_wrap {
+		background-color: white;
+		padding: 32rpx;
+	}
 
 	.content {
 		margin: 48rpx;
 		background-color: #FFFFFF;
+		border-radius: 8rpx;
+
 
 		.item {
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
 			padding: 48rpx 34rpx;
+			cursor: pointer;
 
 			.title {
 				font-size: 32rpx;
@@ -100,8 +115,8 @@
 
 			.right {
 				font-size: 20rpx;
-				
-				view:nth-child(2){
+
+				view:nth-child(2) {
 					color: $uni-text-color;
 				}
 			}
