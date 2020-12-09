@@ -55,6 +55,12 @@
 					title:"商品与页面描述不相符"
 				}]
 			};
+		},
+		methods:{
+			resonChoose(e){
+				
+				this.reasonValue=e.detail.value
+			}
 		}
 	}
 </script>

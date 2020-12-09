@@ -98,10 +98,11 @@
 						</view>
 					</view>
 					<GoodsShow navigateUrl="/pages/order/orderDetail"></GoodsShow>
-					<!-- <view class="yfh_button flexend">
-						<button type="default">查看物流</button>
-						<button type="default">确认收货</button>
-					</view> -->
+					<view class="yfh_button flexend">
+						<button type="default">删除订单</button>
+						<button type="default" @click="afterSaleTap">申请售后</button>
+						<button type="default">评价</button>
+					</view>
 				</view>
 			</view>
 		</view>
@@ -160,6 +161,12 @@
 			this.navIndex = options.tabIndex || 0
 
 		},
+		methods:{
+			afterSaleTap(){
+				
+				this.$common.redirect("/pages/afterSale/select_after_sale_type")
+			}
+		}
 
 	}
 </script>
@@ -252,15 +259,18 @@
 			padding: 16rpx 32rpx;
 			margin: 0;
 			font-size: 28rpx;
-
 			line-height: 32rpx;
 			border-radius: 0 !important;
 		}
+		
+		button:not(:first-child){
+			margin-left: 48rpx;
+		}
 
-		button:nth-child(2) {
+		button:last-child {
 			color: white;
 			background-color: #2B2C3E !important;
-			margin-left: 48rpx;
+			
 		}
 	}
 </style>
