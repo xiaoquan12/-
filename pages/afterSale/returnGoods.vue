@@ -1,8 +1,11 @@
 <!-- 退货 -->
 <template>
 	<view>
-		<AfterSaleGoods :isShowSelectNum="true" @sub="subNum" @add="addNum" :goods="{}"></AfterSaleGoods>
+		<view class="goods_wrap">
+			<AfterSaleGoods :isShowSelectNum="true" @sub="subNum" @add="addNum" :goods="{}"></AfterSaleGoods>
+		</view>
 		
+
 		<ReturnOrExchangeGoods></ReturnOrExchangeGoods>
 		<view class="address flex-column-center">
 			<view class="">
@@ -11,8 +14,8 @@
 			<view class="">
 				18920***765
 			</view>
-		</view>	
-		
+		</view>
+
 		<view class="upload">
 			提交申请
 		</view>
@@ -30,7 +33,7 @@
 		},
 		data() {
 			return {
-				
+
 			};
 		},
 		mounted() {
@@ -52,25 +55,30 @@
 		background-color: #F6F6F6;
 	}
 
-	
-	.address{
+	.goods_wrap {
+		background-color: white;
+		padding: 32rpx;
+	}
+
+	.address {
 		margin: 24rpx 32rpx;
-		
+
 		margin-bottom: 128rpx;
 		box-sizing: border-box;
 		background-color: #FFFFFF;
 		display: flex;
-		
-		view{
+
+		view {
 			padding: 32rpx 24rpx;
 		}
-		view:nth-child(1){
+
+		view:nth-child(1) {
 			border-bottom: 2rpx solid #EEEEEE;
 		}
-		
+
 	}
-	
-	.upload{
+
+	.upload {
 		width: 100%;
 		height: 98rpx;
 		line-height: 98rpx;
@@ -81,7 +89,7 @@
 		left: 0;
 		right: 0;
 		color: #FFFFFF;
-font-size: 32rpx;
-font-weight: 600;
+		font-size: 32rpx;
+		font-weight: 600;
 	}
 </style>

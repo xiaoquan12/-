@@ -90,7 +90,7 @@
 
 	.goods_wrap {
 		background: #FFFFFF;
-		padding: 42rpx 32rpx 32rpx;
+		
 		box-sizing: border-box;
 		display: flex;
 		flex-direction: column;

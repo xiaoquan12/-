@@ -18,7 +18,7 @@
 			</view>
 		</view>
 		
-		<view class="" style="padding-top: 80rpx;">
+		<view class="bgWhite" style="padding: 32rpx 0;">
 			<view class="processMain flex-verCenter" :class='{marT20:index!=0,curr:index==0}' :key="index" v-for="(item, index) in logisticsList">
 				<view class="time_wrap flex-column-center" :class="{curr:index==0}">
 					<view class="date">
@@ -214,5 +214,8 @@
 		view{
 			text-align: center;
 		}
+	}
+	.bgWhite{
+		background-color: white;
 	}
 </style>
