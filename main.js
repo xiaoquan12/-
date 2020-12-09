@@ -9,6 +9,7 @@ import router from './router'
 import storage from '@/utils/storage'
 
 import GoodsShow from '@/components/GoodsShow.vue'
+import NoDataBg from '@/components/noDataBg.vue'
 Object.keys(filters).forEach(key=>{
     Vue.filter(key,filters[key])//插入过滤器名和对应方法
 })
@@ -27,6 +28,7 @@ Vue.prototype.$storage = storage
 
 
 Vue.component('GoodsShow',GoodsShow)
+Vue.component('NoDataBg',NoDataBg)
 
 console.log(uni)
 

@@ -97,7 +97,7 @@
 					status: "退款申请已提交",
 					remark: "退款原因：买错了"
 				}],
-				isShowRefundPrice:false
+				isShowRefundPrice:true
 			};
 		}
 	}

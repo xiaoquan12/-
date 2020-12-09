@@ -4,9 +4,10 @@
 			<image src="" mode="aspectFill"></image>
 			价格由市场供需决定，存在起伏，请理性消费
 		</view>
+		<NoDataBg v-if="list.length==0"></NoDataBg>
 		<view class="list flex-column-center">
-			<view v-for="(item,index) in [1,2,3,4]" :key="index">
-				<GoodsShow ></GoodsShow>
+			<view v-for="(item,index) in list" :key="index">
+				<GoodsShow></GoodsShow>
 			</view>
 		</view>
 	</view>
@@ -19,10 +20,10 @@
 		components: {
 			GoodsShow
 		},
-		
+
 		data() {
 			return {
-
+				list: [1,2,3,4]
 			}
 		},
 		onLoad() {

@@ -67,7 +67,25 @@
 			}
 
 		}
-	],
+	    ,{
+            "path" : "pages/my/personData",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "个人资料",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/my/mySetting",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "我的设置",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
 	"subPackages": [{
 		"root": "pages/order",
 		"pages": [{
