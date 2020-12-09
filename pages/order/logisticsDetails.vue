@@ -20,11 +20,19 @@
 		
 		<view class="" style="padding-top: 80rpx;">
 			<view class="processMain flex-verCenter" :class='{marT20:index!=0,curr:index==0}' :key="index" v-for="(item, index) in logisticsList">
+				<view class="time_wrap flex-column-center" :class="{curr:index==0}">
+					<view class="date">
+						中午
+					</view>
+					<view class="">
+						12:00
+					</view>
+				</view>
 				<view class="mainLeft timeLine marL40 marR50" :class='{colors:index!=0,curr:index==0}'></view>
 				<view class="mainRight flex1 relative">
 					<view class="tuiState" :class='{colorsText:index!=0,curr:index==0}'>{{ item.status }}</view>
 					<view class="tuiDate" :class="{curr:index==0}">{{item.remark}}</view>
-					<view class="tuiDate" :class="{curr:index==0}"> 2020-12-09 12:00:99</view>
+					<!-- <view class="tuiDate" :class="{curr:index==0}"> 2020-12-09 12:00:99</view> -->
 				</view>
 			</view>
 		</view>
@@ -144,10 +152,15 @@
 
 	.curr {
 		color: $uni-text-color !important;
+		
+		.tuiState{
+				font-weight: 600;
+				font-size: 32rpx;
+		}
 	}
 
 	.mainLeft {
-		width: 18rpx;
+		// width: 18rpx;
 		height: 100%;
 		display: flex;
 		position: relative;
@@ -192,5 +205,14 @@
 	
 	.marR50 {
 		margin-right: 50rpx;
+	}
+	.time_wrap{
+		margin-left: 32rpx;
+		font-size: 22rpx;
+		color: #999999;
+		
+		view{
+			text-align: center;
+		}
 	}
 </style>

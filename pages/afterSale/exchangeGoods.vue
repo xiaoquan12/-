@@ -2,36 +2,7 @@
 <template>
 	<view>
 		<AfterSaleGoods :isShowSelectNum="true" @sub="subNum" @add="addNum" :goods="{}"></AfterSaleGoods>
-		<!-- <view class="content">
-			<view class="title flex  flexbetween">
-				<view class="reason_title">
-					申请原因
-				</view>
-				<view class="flex-allcenter">
-					<view class="">
-						<picker mode="selector" :range="reasonList" range-key="title" :value="reasonValue" @change="resonChoose">
-
-							<view class="" v-if="reasonValue==-1">
-								请选择申请原因
-							</view>
-							<view v-else>{{reasonList[reasonValue].title}}</view>
-						</picker>
-					</view>
-					<image src="../../static/images/access_right.png" mode="aspectFill" class="access"></image>
-				</view>
-			</view>
-			<view class="input">
-				<textarea value="" placeholder="请填写申请售后服务的具体原因～" placeholder-style="font-size:28rpx" />
-				</view>
-			<view class="images">
-				<image src="../../static/images/add_image.png" mode=""></image>
-			</view>
-			<view class="tips">
-				为了帮您更好的解决问题，请务必上传照片凭证（最多9张）
-			</view>
-			
-			
-		</view> -->
+		
 		
 		<ReturnOrExchangeGoods></ReturnOrExchangeGoods>
 		

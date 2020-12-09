@@ -99,7 +99,7 @@
 
 <style scoped lang="scss">
 	page {
-		background: $uni-bg-color-grey;
+		background-color: $uni-bg-color-grey;
 	}
 
 	.coupon .item {
