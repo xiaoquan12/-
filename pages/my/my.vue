@@ -135,7 +135,7 @@
 				}, {
 					img: "/static/images/my_tk.png",
 					text: "退款",
-					url: "/pages/order/goods_after_sale?tabIndex=4"
+					url: "/pages/afterSale/goods_after_sale?tabIndex=4"
 				}],
 				serverMenu: [{
 					img: "/static/images/my_jfdd.png",

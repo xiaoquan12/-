@@ -133,7 +133,16 @@
 				"enablePullDownRefresh": false
 			}
 
-		}]
+		}    ,{
+                    "path" : "refundProgress",
+                    "style" :                                                                                    
+                {
+                    "navigationBarTitleText": "退款进度",
+                    "enablePullDownRefresh": false
+                }
+                
+                }
+            ]
 	}],
 
 	"globalStyle": {
