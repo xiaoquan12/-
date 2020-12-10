@@ -113,7 +113,16 @@
 				"navigationBarTitleText": "物流详情",
 				"enablePullDownRefresh": false
 			}
-		}]
+		}    ,{
+                    "path" : "shippingAddress",
+                    "style" :                                                                                    
+                {
+                    "navigationBarTitleText": "收货地址",
+                    "enablePullDownRefresh": false
+                }
+                
+                }
+            ]
 	}, {
 		"root": "pages/afterSale",
 		"pages": [{

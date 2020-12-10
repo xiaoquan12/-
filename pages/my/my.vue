@@ -157,7 +157,7 @@
 				}, {
 					img: "/static/images/my_shdz.png",
 					text: "收货地址",
-					url: ""
+					url: "/pages/order/shippingAddress"
 				}, {
 					img: "/static/images/my_lxkh.png",
 					text: "联系客服",

@@ -6,10 +6,10 @@
 		</view>
 
 		<view class="btn">
-			<view class="">
+			<view class="" @click="backHome">
 				返回首页
 			</view>
-			<view class="">
+			<view class="" @click="seeStatus">
 				查看状态
 			</view>
 		</view>
@@ -22,6 +22,15 @@
 			return {
 
 			};
+		},
+		methods:{
+			backHome(){
+				
+				this.$common.redirect('/pages/index/index')
+			},
+			seeStatus(){
+				this.$common.redirect('/pages/afterSale/refundProgress')
+			}
 		}
 	}
 </script>

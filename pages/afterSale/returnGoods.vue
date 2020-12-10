@@ -16,7 +16,7 @@
 			</view>
 		</view>
 
-		<view class="upload">
+		<view class="upload" @click="submit">
 			提交申请
 		</view>
 	</view>
@@ -45,6 +45,9 @@
 			},
 			addNum(e) {
 				console.log(e)
+			},
+			submit(){
+				this.$common.redirect('/pages/afterSale/afterSaleSubmitSuccess')
 			}
 		}
 	}
