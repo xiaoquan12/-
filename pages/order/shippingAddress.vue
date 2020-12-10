@@ -113,7 +113,7 @@
 		}
 
 		.default {
-			margin-right: 10rpx;
+			margin-right: 16rpx;
 			font-size: 24rpx;
 			color: $uni-text-color;
 			position: relative;
