@@ -20,85 +20,32 @@
 		</view>
 		<view class="list">
 			<view class="" v-if="isShowTabContent(0)">
-				<view v-for="(item,index) in [1,2,3]" :key="index" class="item bgWhite">
-					<view class="order_info flexbetween">
-						<view class="code">
-							订单编号：202005081325283003
-						</view>
-						<view class="type">
-							{{formatStatus(1)}}
-						</view>
-					</view>
-					<GoodsShow navigateUrl="/pages/order/orderDetail"></GoodsShow>
-					<!-- <view class="yfh_button flexend">
-						<button type="default">查看物流</button>
-						<button type="default">确认收货</button>
-					</view> -->
+				<view v-for="(item,index) in [1,2,3]" :key="index" class="bgWhite">
+					<Item :order="{status:1}"></Item>
 				</view>
 			</view>
 			<view class="" v-if="isShowTabContent(1)">
-				<view v-for="(item,index) in [1,2,3]" :key="index" class="item bgWhite">
-					<view class="order_info flexbetween">
-						<view class="code">
-							订单编号：202005081325283003
-						</view>
-						<view class="type">
-							{{formatStatus(1)}}
-						</view>
-					</view>
-					<GoodsShow navigateUrl="/pages/order/orderDetail" :isShowBottomBorder="false"></GoodsShow>
-				<!-- 	<view class="yfh_button flexend">
-						<button type="default">取消订单</button>
-						<button type="default">继续支付</button>
-					</view> -->
+				
+				<view v-for="(item,index) in [1,2,3]" :key="index" class="bgWhite">
+					<Item :order="{status:1}"></Item>
 				</view>
 			</view>
 			<view class="" v-if="isShowTabContent(2)">
-				<view v-for="(item,index) in [1,2,3]" :key="index" class="item bgWhite">
-					<view class="order_info flexbetween">
-						<view class="code">
-							订单编号：202005081325283003
-						</view>
-						<view class="type">
-							{{formatStatus(2)}}
-						</view>
-					</view>
-					<GoodsShow navigateUrl="/pages/order/orderDetail" :isShowBottomBorder="false"></GoodsShow>
-					<!-- <view class="yfh_button flexend">
-						<button type="default">查看物流</button>
-						<button type="default">确认收货</button>
-					</view> -->
+				
+				<view v-for="(item,index) in [1,2,3]" :key="index" class="bgWhite">
+					<Item :order="{status:2}"></Item>
 				</view>
 			</view>
 			<view class="" v-if="isShowTabContent(3)">
-				<view v-for="(item,index) in [1,2,3]" :key="index" class="item bgWhite">
-					<view class="order_info flexbetween">
-						<view class="code">
-							订单编号：202005081325283003
-						</view>
-						<view class="type">
-							{{formatStatus(3)}}
-						</view>
-					</view>
-					<GoodsShow navigateUrl="/pages/order/orderDetail" :isShowBottomBorder="false"></GoodsShow>
-					<!-- <view class="yfh_button flexend">
-						<button type="default">查看物流</button>
-						<button type="default">确认收货</button>
-					</view> -->
+				
+				<view v-for="(item,index) in [1,2,3]" :key="index" class="bgWhite">
+					<Item :order="{status:3}"></Item>
 				</view>
 			</view>
 			<view class="" v-if="isShowTabContent(4)">
-				<view v-for="(item,index) in [1,2,3]" :key="index" class="item bgWhite">
-					<view class="order_info flexbetween">
-						<view class="code">
-							订单编号：202005081325283003
-						</view>
-						<view class="type">
-							{{formatStatus(4)}}
-						</view>
-					</view>
-					<GoodsShow navigateUrl="/pages/order/orderDetail" :isShowBottomBorder="false"></GoodsShow>
-
+				
+				<view v-for="(item,index) in [1,2,3]" :key="index" class="bgWhite">
+					<Item :order="{status:4}"></Item>
 				</view>
 			</view>
 		</view>
@@ -107,7 +54,12 @@
 </template>
 
 <script>
+	import Item from './goods_after_sale_item.vue';
+	
 	export default {
+		components: {
+			Item
+		},
 		data() {
 			return {
 				navIndex: 0
@@ -195,36 +147,36 @@
 	.list {
 		margin-top: 75rpx;
 	}
-	
 
-	
-	
+
+
+
 	.item {
 		padding-top: 32rpx;
 		border-bottom: 10rpx solid #F6F6F6;
 	}
-	
+
 	.order_info {
 		padding: 0 32rpx;
-	
+
 		.code {
-	
+
 			font-size: 24rpx;
 			font-family: PingFangSC-Regular, PingFang SC;
 			font-weight: 400;
 			color: #666666;
-	
+
 		}
-	
+
 		.type {
-	
+
 			font-size: 24rpx;
-	
+
 			font-weight: 400;
 			color: $uni-text-color;
-	
-	
-	
+
+
+
 		}
 	}
 </style>

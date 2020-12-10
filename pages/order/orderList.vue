@@ -55,7 +55,7 @@
 </template>
 
 <script>
-	import OrderItem from '../../components/orderListItem.vue'
+	import OrderItem from './orderListItem.vue'
 	export default {
 		components: {
 			OrderItem
