@@ -20,89 +20,34 @@
 
 		<view class="list">
 			<view class="" v-if="isShowTabContent(0)">
-				<view v-for="(item,index) in [1,2,3]" :key="index" class="item">
-					<view class="order_info flexbetween">
-						<view class="code">
-							订单编号：202005081325283003
-						</view>
-						<view class="type">
-							{{formatStatus(0)}}
-						</view>
-					</view>
-					<GoodsShow navigateUrl="/pages/order/orderDetail"></GoodsShow>
-					<view class="yfh_button flexend">
-						<button type="default">查看物流</button>
-						<button type="default">确认收货</button>
-					</view>
+
+				<view v-for="(item,index) in allOrderList" :key="index">
+					<OrderItem :order="item"></OrderItem>
 				</view>
+
 			</view>
 			<view class="" v-if="isShowTabContent(1)">
-				<view v-for="(item,index) in [1,2,3]" :key="index" class="item">
-					<view class="order_info flexbetween">
-						<view class="code">
-							订单编号：202005081325283003
-						</view>
-						<view class="type">
-							{{formatStatus(1)}}
-						</view>
-					</view>
-					<GoodsShow navigateUrl="/pages/order/orderDetail"></GoodsShow>
-					<view class="yfh_button flexend">
-						<button type="default">取消订单</button>
-						<button type="default">继续支付</button>
-					</view>
+
+				<view v-for="(item,index) in [1,2,3]" :key="index">
+					<OrderItem :order="{status:1}"></OrderItem>
 				</view>
 			</view>
 			<view class="" v-if="isShowTabContent(2)">
-				<view v-for="(item,index) in [1,2,3]" :key="index" class="item">
-					<view class="order_info flexbetween">
-						<view class="code">
-							订单编号：202005081325283003
-						</view>
-						<view class="type">
-							{{formatStatus(2)}}
-						</view>
-					</view>
-					<GoodsShow navigateUrl="/pages/order/orderDetail"></GoodsShow>
-					<view class="yfh_button flexend">
-						<button type="default">查看物流</button>
-						<button type="default">确认收货</button>
-					</view>
+
+				<view v-for="(item,index) in [1,2,3]" :key="index">
+					<OrderItem :order="{status:2}"></OrderItem>
 				</view>
 			</view>
 			<view class="" v-if="isShowTabContent(3)">
-				<view v-for="(item,index) in [1,2,3]" :key="index" class="item">
-					<view class="order_info flexbetween">
-						<view class="code">
-							订单编号：202005081325283003
-						</view>
-						<view class="type">
-							{{formatStatus(3)}}
-						</view>
-					</view>
-					<GoodsShow navigateUrl="/pages/order/orderDetail"></GoodsShow>
-					<view class="yfh_button flexend">
-						<button type="default">查看物流</button>
-						<button type="default">确认收货</button>
-					</view>
+
+				<view v-for="(item,index) in [1,2,3]" :key="index">
+					<OrderItem :order="{status:3}"></OrderItem>
 				</view>
 			</view>
 			<view class="" v-if="isShowTabContent(4)">
-				<view v-for="(item,index) in [1,2,3]" :key="index" class="item">
-					<view class="order_info flexbetween">
-						<view class="code">
-							订单编号：202005081325283003
-						</view>
-						<view class="type">
-							{{formatStatus(4)}}
-						</view>
-					</view>
-					<GoodsShow navigateUrl="/pages/order/orderDetail"></GoodsShow>
-					<view class="yfh_button flexend">
-						<button type="default">删除订单</button>
-						<button type="default" @click="afterSaleTap">申请售后</button>
-						<button type="default">评价</button>
-					</view>
+
+				<view v-for="(item,index) in [1,2,3]" :key="index">
+					<OrderItem :order="{status:4}"></OrderItem>
 				</view>
 			</view>
 		</view>
@@ -110,62 +55,43 @@
 </template>
 
 <script>
+	import OrderItem from '../../components/orderListItem.vue'
 	export default {
+		components: {
+			OrderItem
+		},
 		data() {
 			return {
-				navIndex: 0
+				navIndex: 0,
+				allOrderList: [{
+					status: 1
+				}, {
+					status: 2
+				}, {
+					status: 4
+				}, {
+					status: 4
+				}, {
+					status: 3
+				}]
 			};
 		},
 		computed: {
-			// getSelectTabCss() {
-			// 	return function(index) {
 
-			// 		return this.navIndex == index ? "select" : ""
-
-			// 	}
-			// },
 			isShowTabContent() {
 				return function(index) {
 					return this.navIndex == index
 				}
 			},
-			formatStatus() {
-				return function(status) {
 
-					switch (status) {
-						case 0:
-							return "待发货"
-							break;
-						case 1:
-							return "待付款"
-							break;
-						case 2:
-							return "待发货"
-							break;
-						case 3:
-							return "待收货"
-							break;
-						case 4:
-							return "已完成"
-							break;
-						default:
-							return ""
-							break;
-					}
-
-				}
-			}
 		},
 		onLoad(options) {
 
 			this.navIndex = options.tabIndex || 0
 
 		},
-		methods:{
-			afterSaleTap(){
-				
-				this.$common.redirect("/pages/afterSale/select_after_sale_type")
-			}
+		methods: {
+
 		}
 
 	}
@@ -209,6 +135,13 @@
 
 	.list {
 		margin-top: 75rpx;
+		
+		
+	}
+	
+	.list>view>view{
+		// border-bottom: 1rpx solid #EEEEEE;
+		background-color: white;
 	}
 
 
@@ -261,16 +194,17 @@
 			font-size: 28rpx;
 			line-height: 32rpx;
 			border-radius: 0 !important;
+			width: 176rpx;
 		}
-		
-		button:not(:first-child){
+
+		button:not(:first-child) {
 			margin-left: 48rpx;
 		}
 
 		button:last-child {
 			color: white;
 			background-color: #2B2C3E !important;
-			
+
 		}
 	}
 </style>
