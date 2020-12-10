@@ -1,7 +1,7 @@
 <template>
 	<view class="submit_wrap">
 		<view class="flex-column-center">
-			<image src="" mode="aspectFill"></image>
+			<image src="../../static/images/success.jpg" mode="aspectFill"></image>
 			<text class="status_text">提交成功</text>
 		</view>
 
@@ -52,6 +52,7 @@
 				height: 210rpx;
 			}
 		.status_text {
+			margin-top: 16rpx;
 			text-align: center;
 			font-size: 40rpx;
 			font-family: PingFangSC-Regular, PingFang SC;

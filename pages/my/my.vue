@@ -163,7 +163,7 @@
 					text: "联系客服",
 					url: ""
 				}, {
-					img: "/static/images/my_wdsz.png",
+					img: "/static/images/my_wdsz.jpg",
 					text: "我的设置",
 					url: "/pages/my/mySetting"
 				}],
