@@ -122,6 +122,15 @@
                 }
                 
                 }
+                ,{
+                    "path" : "addShippingAddress",
+                    "style" :                                                                                    
+                {
+                    "navigationBarTitleText": "添加收货地址",
+                    "enablePullDownRefresh": false
+                }
+                
+                }
             ]
 	}, {
 		"root": "pages/afterSale",

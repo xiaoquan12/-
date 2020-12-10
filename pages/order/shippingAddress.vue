@@ -32,7 +32,7 @@
 		</view>
 
 
-		<view class="addAddress">
+		<view class="addAddress" @click="addNewAddress">
 			新增地址
 		</view>
 	</view>
@@ -66,6 +66,9 @@
 					this.modalName = null
 				}
 				this.listTouchDirection = null
+			},
+			addNewAddress(){
+				this.$common.redirect('/pages/order/addShippingAddress')
 			}
 		}
 	}
@@ -157,6 +160,7 @@
 		color: #FFFFFF;
 		line-height: 98rpx;
 		text-align: center;
+		cursor: pointer;
 	}
 
 	.delete {
