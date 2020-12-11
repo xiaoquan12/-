@@ -94,6 +94,15 @@
             }
             
         }
+        ,{
+            "path" : "pages/my/replacePhone",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "更换手机号",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
 	"subPackages": [{
 		"root": "pages/order",
