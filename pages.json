@@ -85,6 +85,15 @@
             }
             
         }
+        ,{
+            "path" : "pages/my/accountAndSecurity",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "账号与安全",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
 	"subPackages": [{
 		"root": "pages/order",
