@@ -1,13 +1,22 @@
-<!-- 更换手机号 -->
+<!-- 更换手机号下一步 -->
 <template>
 	<view class="">
 		<view class="remark flex">
 			<view class="tip">
-				验证当前绑定的手机号：
+				更换后，下次可用新手机号登录：
 			</view>
-			<view class="phone">
+			<!-- <view class="phone">
 				150****8080
+			</view> -->
+		</view>
+		<view class="flex flexbetween p32 bgWhite">
+			<view class="title">
+				+86
 			</view>
+			<view class="content">
+				<input type="text" :value="phone" @input="phoneInput" maxlength="11" placeholder="输入手机号" placeholder-class="placeholder" />
+			</view>
+
 		</view>
 		<view class="flex flexbetween p32 bgWhite">
 			<view class="title">
@@ -22,8 +31,8 @@
 		</view>
 
 		<view class="p32">
-			<view class="submit" :class="{next:code.length==6}">
-				下一步
+			<view class="submit" :class="{next:code.length==6 && phone.length==11}">
+				完成
 			</view>
 		</view>
 	</view>
@@ -33,23 +42,29 @@
 	export default {
 		data() {
 			return {
-				code: ""
+				code: "",
+				phone: ""
 			};
 		},
 		methods: {
 			codeInput(e) {
 				let val = e.detail.value;
-				
+
 				this.code = val
+			},
+			phoneInput(e) {
+				let val = e.detail.value;
+				this.phone = val
 			}
 		}
 	}
 </script>
 
 <style lang="scss">
-	page{
+	page {
 		background-color: $uni-bg-color-grey;
 	}
+
 	.remark {
 		padding: 48rpx 32rpx 24rpx;
 		align-items: center;
@@ -79,7 +94,7 @@
 	}
 
 	.title {
-
+		width: 100rpx;
 		font-size: 28rpx;
 		font-family: PingFangSC;
 		color: #333333;
