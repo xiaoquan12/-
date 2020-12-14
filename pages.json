@@ -112,6 +112,15 @@
             }
             
         }
+        ,{
+            "path" : "pages/my/feedback",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "意见反馈",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
 	"subPackages": [{
 		"root": "pages/order",
