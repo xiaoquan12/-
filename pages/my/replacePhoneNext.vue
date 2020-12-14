@@ -29,7 +29,6 @@
 				获取验证码
 			</view>
 		</view>
-
 		<view class="p32">
 			<view class="submit" :class="{next:code.length==6 && phone.length==11}">
 				完成
