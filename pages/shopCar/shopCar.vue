@@ -5,7 +5,7 @@
 			<view class="addressText floatL marL10">北京市朝阳区来广营帝维系咖啡</view>
 			<view class="addressButton floatR marR30" @click='editShop'>
 				{{isEdit?"完成":"编辑"}}
-			</view>
+		    </view>
 		</view>
 	    <view class='shopSon flex-verCenter' :class="{'marT20':index==0}" v-for="(item,index) in shopList" :key="index">
 			<view class="chooseShop flex-alcenter" @click='chooseShops(item,index)'>
@@ -170,7 +170,6 @@
 		font-weight: 600;
 		color: #FFFFFF;
 	}
-	
 	.shopSon{
 		width: 750rpx;
 		background-color: #ffffff;

@@ -10,7 +10,12 @@
     "pages/my/integralOrder",
     "pages/my/history",
     "pages/my/message_server",
-    "pages/my/message_server_detail"
+    "pages/my/message_server_detail",
+    "pages/my/personData",
+    "pages/my/mySetting",
+    "pages/my/accountAndSecurity",
+    "pages/my/replacePhone",
+    "pages/my/replacePhoneNext"
   ],
   "subPackages": [
     {
@@ -19,11 +24,20 @@
         "orderList",
         "orderDetail",
         "goods_evaluate",
+        "logisticsDetails",
+        "shippingAddress",
+        "addShippingAddress"
+      ]
+    },
+    {
+      "root": "pages/afterSale",
+      "pages": [
         "goods_after_sale",
         "select_after_sale_type",
         "exchangeGoods",
         "returnGoods",
-        "afterSaleSubmitSuccess"
+        "afterSaleSubmitSuccess",
+        "refundProgress"
       ]
     }
   ],
@@ -66,7 +80,8 @@
     ]
   },
   "usingComponents": {
-    "goods-show": "/components/GoodsShow"
+    "goods-show": "/components/GoodsShow",
+    "no-data-bg": "/components/noDataBg"
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap77.json"
 }
