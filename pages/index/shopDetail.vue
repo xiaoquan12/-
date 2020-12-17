@@ -105,11 +105,34 @@
 			</view>
 			<view class="flex-column-center evaluate_list">
 				<view class="evalutate_item_wrap" v-for="(item,index) in [1,2]" :key="index">
-					<EvaluateItem></EvaluateItem>
+					<EvaluateItem :imgsStyle="{}"></EvaluateItem>
 				</view>
 			</view>
 		</view>
-		
+		<view class="evaluate_wrap p32 bgWhite">
+			<view class="header alic" data-url="/pages/index/evaluateList" @click="navigateTo">
+				<view class="flex-allcenter alic">
+					<view class="evaluate_title">
+						问答
+					</view>
+					<!-- <view class="evaluate_count">
+						10000+
+					</view> -->
+				</view>
+				<view class="high_praise alic">
+					查看全部回答
+					<image src="../../static/images/access_right.png" mode="aspectFill" class="access"></image>
+				</view>
+			</view>
+			<view class="flex-column-center evaluate_list">
+				<view class="evalutate_item_wrap" v-for="(item,index) in [1,2]" :key="index">
+					<!-- <EvaluateItem></EvaluateItem> -->
+				</view>
+			</view>
+		</view>
+			<view class="" style="height:100rpx">
+				
+			</view>
 		<BottomBuy></BottomBuy>
 	</view>
 </template>

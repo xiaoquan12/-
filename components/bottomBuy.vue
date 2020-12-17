@@ -1,18 +1,23 @@
 <template>
-	<view class="flex bottom_buy">
-		<view class="icon">
-			<image src="../static/images/icon_24＊24pt_kefu@2x.png" mode=""></image>
+	<view class="">
+		<view class="" style="height:100rpx">
 		</view>
-		<view class="icon">
-			<image src="../static/images/icon_24＊24pt_gouwuche@2x.png" mode=""></image>
-		</view>
-		<view class="addCar">
-			加入购物车
-		</view>
-		<view class="buy">
-			立即购买
+		<view class="flex bottom_buy">
+			<view class="icon">
+				<image src="../static/images/icon_24＊24pt_kefu@2x.png" mode=""></image>
+			</view>
+			<view class="icon">
+				<image src="../static/images/icon_24＊24pt_gouwuche@2x.png" mode=""></image>
+			</view>
+			<view class="addCar">
+				加入购物车
+			</view>
+			<view class="buy">
+				立即购买
+			</view>
 		</view>
 	</view>
+
 </template>
 
 <script>
@@ -48,7 +53,7 @@
 
 		view:nth-child(2)::before,
 		view:nth-child(1)::before {
-			
+
 			content: " ";
 			position: absolute;
 			right: 0;
