@@ -125,24 +125,47 @@
 				</view>
 			</view>
 			<view class="flex-column-center evaluate_list">
-				<view class="evalutate_item_wrap" v-for="(item,index) in [1,2]" :key="index">
+				<view class="evalutate_item_wrap" v-for="(item,index) in new Array(2)" :key="index">
 					<!-- <EvaluateItem></EvaluateItem> -->
 				</view>
 			</view>
 		</view>
-			<view class="" style="height:100rpx">
-				
+		<view class="evaluate_wrap p32 bgWhite">
+			<view class="header alic" data-url="/pages/index/recentPurchase" @click="navigateTo">
+				<view class="flex-allcenter alic">
+					<view class="evaluate_title">
+						最近购买
+					</view>
+					<!-- <view class="evaluate_count">
+						10000+
+					</view> -->
+				</view>
+				<view class="high_praise alic">
+					查看全部
+					<image src="../../static/images/access_right.png" mode="aspectFill" class="access"></image>
+				</view>
 			</view>
+			<view class="flex-column-center evaluate_list">
+				<view class="evalutate_item_wrap" v-for="(item,index) in new Array(5)" :key="index">
+					<RecentPurchaseItem></RecentPurchaseItem>
+				</view>
+			</view>
+		</view>
+
+
+
 		<BottomBuy></BottomBuy>
 	</view>
 </template>
 <script>
 	import EvaluateItem from '../../components/evaluateItem.vue';
 	import BottomBuy from '../../components/bottomBuy.vue'
+	import RecentPurchaseItem from '../../components/recentPurchaseItem.vue'
 	export default {
 		components: {
 			EvaluateItem,
-			BottomBuy
+			BottomBuy,
+			RecentPurchaseItem
 		},
 		data() {
 			return {
