@@ -5,6 +5,12 @@
 			"style": {
 				"navigationBarTitleText": "BABICH"
 			}
+		}, {
+			"path": "pages/index/shopDetail",
+			"style": {
+				"navigationBarTitleText": "商品详情"
+			}
+
 		},
 		{
 			"path": "pages/type/type",
@@ -66,62 +72,50 @@
 				"enablePullDownRefresh": false
 			}
 
+		}, {
+			"path": "pages/my/personData",
+			"style": {
+				"navigationBarTitleText": "个人资料",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/my/mySetting",
+			"style": {
+				"navigationBarTitleText": "我的设置",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/my/accountAndSecurity",
+			"style": {
+				"navigationBarTitleText": "账号与安全",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/my/replacePhone",
+			"style": {
+				"navigationBarTitleText": "更换手机号",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/my/replacePhoneNext",
+			"style": {
+				"navigationBarTitleText": "更换手机号",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/my/feedback",
+			"style": {
+				"navigationBarTitleText": "意见反馈",
+				"enablePullDownRefresh": false
+			}
+
 		}
-	    ,{
-            "path" : "pages/my/personData",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "个人资料",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/my/mySetting",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "我的设置",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/my/accountAndSecurity",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "账号与安全",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/my/replacePhone",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "更换手机号",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/my/replacePhoneNext",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "更换手机号",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/my/feedback",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "意见反馈",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-    ],
+	],
 	"subPackages": [{
 		"root": "pages/order",
 		"pages": [{
@@ -149,25 +143,21 @@
 				"navigationBarTitleText": "物流详情",
 				"enablePullDownRefresh": false
 			}
-		}    ,{
-                    "path" : "shippingAddress",
-                    "style" :                                                                                    
-                {
-                    "navigationBarTitleText": "收货地址",
-                    "enablePullDownRefresh": false
-                }
-                
-                }
-                ,{
-                    "path" : "addShippingAddress",
-                    "style" :                                                                                    
-                {
-                    "navigationBarTitleText": "添加收货地址",
-                    "enablePullDownRefresh": false
-                }
-                
-                }
-            ]
+		}, {
+			"path": "shippingAddress",
+			"style": {
+				"navigationBarTitleText": "收货地址",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "addShippingAddress",
+			"style": {
+				"navigationBarTitleText": "添加收货地址",
+				"enablePullDownRefresh": false
+			}
+
+		}]
 	}, {
 		"root": "pages/afterSale",
 		"pages": [{
@@ -205,16 +195,14 @@
 				"enablePullDownRefresh": false
 			}
 
-		}    ,{
-                    "path" : "refundProgress",
-                    "style" :                                                                                    
-                {
-                    "navigationBarTitleText": "退款进度",
-                    "enablePullDownRefresh": false
-                }
-                
-                }
-            ]
+		}, {
+			"path": "refundProgress",
+			"style": {
+				"navigationBarTitleText": "退款进度",
+				"enablePullDownRefresh": false
+			}
+
+		}]
 	}],
 
 	"globalStyle": {

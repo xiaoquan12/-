@@ -1,11 +1,11 @@
 <template>
-	<view>
+	<view class="paddingB40">
 		<!-- 信息部分 -->
 		<view class="card ">
 			<view class="info">
-				<view class="info_left" >
+				<view class="info_left">
 					<image class="photo" mode="aspectFill" data-url="/pages/my/personData" @tap="navigateTo" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1606227337468&di=dd6fb5de0f05a0e111c69e2ca2afea99&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201809%2F01%2F20180901190625_wmpeq.thumb.700_0.jpeg"></image>
-					<view class="flex-column-center" >
+					<view class="flex-column-center">
 						<view class="name" data-url="/pages/my/personData" @tap="navigateTo">
 							哈哈哈
 						</view>
@@ -22,7 +22,7 @@
 			</view>
 			<view class="datas">
 
-				<view class="item"  data-url="/pages/my/collection" @click="navigateTo">
+				<view class="item" data-url="/pages/my/collection" @click="navigateTo">
 					<view class="num">
 						2
 
@@ -38,11 +38,11 @@
 					<view class="num">
 						17
 					</view>
-					<view class="remark" >
+					<view class="remark">
 						浏览记录
 					</view>
 				</view>
-				<view class="item"  data-url="/pages/my/integral" @click="navigateTo">
+				<view class="item" data-url="/pages/my/integral" @click="navigateTo">
 					<view class="num">
 						292931
 					</view>
@@ -50,7 +50,7 @@
 						我的积分
 					</view>
 				</view>
-				<view class="item"  data-url="/pages/my/coupon" @click="navigateTo">
+				<view class="item" data-url="/pages/my/coupon" @click="navigateTo">
 					<view class="num">
 						3
 					</view>
@@ -67,8 +67,9 @@
 				<view class="name">
 					我的订单
 				</view>
-				<view class="more access" >
-					查看更多 
+				<view class="more ">
+					查看更多
+					<image src="../../static/images/access_right.png" mode="aspectFill" class="access"></image>
 				</view>
 			</view>
 
@@ -178,12 +179,12 @@
 			navigateTo(e) {
 
 				let url = e.currentTarget.dataset.url;
-				
+
 				this.$common.redirect(url)
 			},
-			seeMoreOrderTap(){
-				
-				
+			seeMoreOrderTap() {
+
+
 			}
 		}
 	}
@@ -310,6 +311,7 @@
 					line-height: 38rpx;
 					position: relative;
 				}
+
 				.redPoint {
 					position: absolute;
 					top: -10rpx;
@@ -340,7 +342,8 @@
 		margin: 24rpx 32rpx;
 		background-color: white;
 		padding: 32rpx 24rpx;
-		border-radius: 4rpx; 
+		border-radius: 4rpx;
+
 		.title {
 			font-size: 32rpx;
 			font-family: PingFangSC-Semibold, PingFang SC;
@@ -357,7 +360,9 @@
 				color: #999999;
 				line-height: 34rpx;
 				position: relative;
-				padding-right: 20rpx;
+				// padding-right: 20rpx;
+				display: flex;
+				align-items: center;
 
 			}
 
@@ -402,20 +407,4 @@
 	}
 
 
-	.access:after {
-		content: " ";
-		display: inline-block;
-		height: 15rpx;
-		width: 15rpx;
-		border-width: 2px 2px 0 0;
-		border-color: #bbb;
-		border-style: solid;
-		-webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
-		transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
-		top: -2px;
-		position: absolute;
-		top: 50%;
-		margin-top: -4px;
-		right: 2px;
-	}
 </style>

@@ -106,13 +106,7 @@
 		cursor: pointer;
 	}
 
-	.placeholder {
-
-		font-size: 28rpx;
-		font-family: PingFangSC;
-		color: #BBBBBB;
-
-	}
+	
 
 	.submit {
 		margin-top: 80rpx;
