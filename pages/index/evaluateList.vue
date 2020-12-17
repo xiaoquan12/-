@@ -7,7 +7,7 @@
 		</view>
 
 		<view class="list flex-column-center p32 bgWhite">
-			<view class="item_wrap" v-for="(item,index) in [1,2,3,4,5]" :key="index">
+			<view class="item_wrap" v-for="(item,index) in new Array(10)" :key="index">
 				<EvaluateItem :imgsStyle="imgsStyle"></EvaluateItem>
 			</view>
 		</view>

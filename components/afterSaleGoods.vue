@@ -10,7 +10,7 @@
 					<view class="title">
 						Vintara Red（干红/13度）百琪干红葡萄酒750ML/13度
 					</view>
-					<view class="props flex">
+					<view class="props flex" v-if="isShowPriceAndNum">
 						<view class="item flex">
 							<view class="title">
 								单价：
@@ -61,6 +61,11 @@
 			goods:{
 				type:Object,
 				default:{}
+			},
+				
+			isShowPriceAndNum:{
+				type:Boolean,
+				default:true
 			}
 		},
 		data() {
