@@ -17,12 +17,12 @@
 </template>
 
 <script>
-	import EvaluateItem from '../../components/evaluateItem.vue';
-	import BottomBuy from '../../components/bottomBuy.vue'
+	// import EvaluateItem from '../../components/evaluateItem.vue';
+	// import BottomBuy from '../../components/bottomBuy.vue'
 	export default {
 		components: {
-			EvaluateItem,
-			BottomBuy
+			EvaluateItem:()=> import('../../components/evaluateItem.vue'),
+			BottomBuy:()=> import('../../components/bottomBuy.vue')
 		},
 		data() {
 			return {

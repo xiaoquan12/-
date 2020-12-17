@@ -124,6 +124,15 @@
             }
             
         }
+        ,{
+            "path" : "pages/index/recentPurchase",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "最近购买",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
 	"subPackages": [{
 		"root": "pages/order",
