@@ -115,7 +115,16 @@
 			}
 
 		}
-	],
+	    ,{
+            "path" : "pages/index/evaluateList",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "全部评价",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
 	"subPackages": [{
 		"root": "pages/order",
 		"pages": [{

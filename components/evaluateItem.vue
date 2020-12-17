@@ -20,9 +20,10 @@
 				<view class="description">
 					语雀是一款优雅高效的在线文档编辑与协同工具， 让每个企业轻松拥有文档中心阿里巴巴集团内部使用多年，众多中小企业。
 				</view>
-				<view class="imgs">
+				<view class="imgs" :style="imgsStyle">
 
-					<image src="../static/images/jiu.png" mode="aspectFill" v-for="(item,index) in [1,2,3,4,5]" :key="index"></image>
+					<image src="../static/images/jiu.png" :style="imgsStyle.image" mode="aspectFill" v-for="(item,index) in [1,2,3,4,5]"
+					 :key="index"></image>
 				</view>
 			</view>
 		</view>
@@ -31,6 +32,15 @@
 
 <script>
 	export default {
+
+		props: {
+			imgsStyle: {
+				type: Object,
+				default: {
+					image: {}
+				}
+			}
+		},
 		data() {
 			return {
 
@@ -44,7 +54,7 @@
 		display: flex;
 		flex-direction: column;
 		padding: 32rpx 0;
-		
+
 
 		.header {
 			display: flex;
@@ -105,12 +115,15 @@
 
 			.imgs {
 				display: flex;
-				// overflow-x: auto;
-				flex-wrap: wrap;
+				overflow-x: auto;
+				overflow-y: hidden;
+				// flex-wrap: wrap;
 				margin-top: 16rpx;
+
 				image {
 					display: flex;
 					width: 160rpx;
+					min-width: 160rpx;
 					height: 160rpx;
 
 				}

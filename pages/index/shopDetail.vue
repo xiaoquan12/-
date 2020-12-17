@@ -89,7 +89,7 @@
 			</view>
 		</view>
 		<view class="evaluate_wrap p32 bgWhite">
-			<view class="header alic">
+			<view class="header alic" data-url="/pages/index/evaluateList" @click="navigateTo">
 				<view class="flex-allcenter alic">
 					<view class="evaluate_title">
 						评价
@@ -109,13 +109,17 @@
 				</view>
 			</view>
 		</view>
+		
+		<BottomBuy></BottomBuy>
 	</view>
 </template>
 <script>
-	import EvaluateItem from '../../components/evaluateItem.vue'
+	import EvaluateItem from '../../components/evaluateItem.vue';
+	import BottomBuy from '../../components/bottomBuy.vue'
 	export default {
 		components: {
-			EvaluateItem
+			EvaluateItem,
+			BottomBuy
 		},
 		data() {
 			return {
@@ -129,6 +133,12 @@
 		methods: {
 			collectTap() {
 				this.isCollect = !this.isCollect
+			},
+			navigateTo(e) {
+
+				let url = e.currentTarget.dataset.url;
+
+				this.$common.redirect(url)
 			}
 		}
 	}
