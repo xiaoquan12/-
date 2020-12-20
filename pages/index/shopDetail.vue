@@ -57,7 +57,7 @@
 					<image src="../../static/images/access_right.png" mode="aspectFill" class="access"></image>
 				</view>
 			</view>
-			<view class="goods_i">
+			<view class="goods_i" @click="isShowChooseSku=true">
 				<view class="title">
 					已选
 				</view>
@@ -151,16 +151,65 @@
 				</view>
 			</view>
 		</view>
-		
+
 		<view class="detail bgWhite">
 			<view class="title">
 				-详情-
 			</view>
 			<view class="imgs">
-				<image src="../../static/images/jiu.png" mode="aspectFill"  v-for="(item,index) in new Array(2)"></image>
+				<image src="../../static/images/jiu.png" mode="aspectFill" v-for="(item,index) in new Array(2)"></image>
 			</view>
 		</view>
 
+		<view class="chooseSkuDialog" v-if="isShowChooseSku" @click="closeChooseSku">
+
+		</view>
+		<view class="chooseSku flex-column-center" :class="{showChooseSku:isShowChooseSku}">
+			<image src="../../static/images/close.png" mode="aspectFill" class="close" @click="closeChooseSku"></image>
+			<view class="p32 flex-column-center">
+				<view class="flex">
+					<image src="../../static/images/jiu.png" mode="aspectFill" class="photo"></image>
+					<view class="flex-column-center">
+						<view class="price">
+							￥299
+						</view>
+						<view class="weight">
+							重量：10kg
+						</view>
+					</view>
+				</view>
+				<view class="flex-column-center">
+					<view class="choose_sku_title">
+						选择规格
+					</view>
+					<view class="list">
+						<view v-for="(item,index) in skuList" :key="index" :class="{selectSku:selectSkuIndex==index}" @click="selectSkuIndex=index">
+							{{item.name}}
+						</view>
+					</view>
+				</view>
+
+				<view class="flex flexbetween buyNums">
+					<view class="buyNum_txt">
+						购买数量
+					</view>
+					<view class="shopButtomRight flex-verCenter">
+						<view class="shopNumButton flex-allcenter" @click='subNum'>
+							-
+						</view>
+						<view class="shopNum">
+							{{buyNum}}
+						</view>
+						<view class="shopNumButton flex-allcenter" @click='addNum'>
+							+
+						</view>
+					</view>
+				</view>
+			</view>
+			<view class="buy">
+				立即购买
+			</view>
+		</view>
 
 
 		<BottomBuy></BottomBuy>
@@ -178,7 +227,20 @@
 		},
 		data() {
 			return {
-				isCollect: false
+				isCollect: false,
+				isShowChooseSku: false,
+				skuList: [{
+					id: "1",
+					name: "单只·Vintara Red·750ML/13度"
+				}, {
+					id: "2",
+					name: "6只·Vintara Red·750ML/13度·成箱装"
+				}, {
+					id: "3",
+					name: "2只·Vintara Red·750ML/13度·礼盒装"
+				}],
+				selectSkuIndex: 0,
+				buyNum: 1
 			}
 		},
 		onLoad() {
@@ -194,6 +256,10 @@
 				let url = e.currentTarget.dataset.url;
 
 				this.$common.redirect(url)
+			},
+
+			closeChooseSku() {
+				this.isShowChooseSku = false
 			}
 		}
 	}
@@ -406,11 +472,11 @@
 
 
 	}
-	
-	.detail{
-		
-		.title{
-			
+
+	.detail {
+
+		.title {
+
 			font-size: 28rpx;
 			font-family: PingFangSC-Regular, PingFang SC;
 			font-weight: 400;
@@ -419,13 +485,177 @@
 			text-align: center;
 
 		}
-		
-		.imgs{
+
+		.imgs {
 			display: flex;
 			flex-direction: column;
-			image{
+
+			image {
 				width: 100%;
 			}
 		}
+	}
+
+	.chooseSkuDialog {
+		z-index: 1;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.6);
+	}
+
+	.chooseSku {
+		position: fixed;
+		bottom: 0rpx;
+		left: 0;
+		right: 0;
+		transform: translateY(100%);
+		z-index: 2;
+		background-color: white;
+		transition: all 0.5s;
+
+		.close {
+			width: 32rpx;
+			height: 32rpx;
+			border: 3rpx solid #999999;
+			position: absolute;
+			top: 32rpx;
+			right: 32rpx;
+			border-radius: 50%;
+		}
+
+		.photo {
+			height: 180rpx;
+			width: 180rpx;
+			padding-right: 32rpx;
+		}
+
+		.price {
+			font-size: 40rpx;
+			font-family: PingFangSC-Semibold, PingFang SC;
+			font-weight: 600;
+			color: $uni-text-color;
+
+		}
+
+		.weight {
+			padding-top: 14rpx;
+			font-size: 24rpx;
+			font-family: PingFangSC-Regular, PingFang SC;
+			font-weight: 400;
+			color: #666666;
+
+
+		}
+
+		.choose_sku_title {
+
+			font-size: 28rpx;
+			font-family: PingFangSC-Semibold, PingFang SC;
+			font-weight: 600;
+			color: #333333;
+			line-height: 40px;
+
+		}
+
+		.list {
+
+			view {
+				padding: 32rpx 0;
+
+				font-size: 24rpx;
+				font-family: PingFangSC-Regular, PingFang SC;
+				font-weight: 400;
+				color: #999999;
+				border: 4rpx solid #979797;
+				padding: 16rpx 32rpx;
+				margin: 32rpx 0;
+				position: relative;
+			}
+
+			.selectSku {
+				color: #000000;
+				border: 4rpx solid #000000;
+
+			}
+
+			.selectSku::after {
+				content: " ";
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				// height: 30rpx;
+				// width: 30rpx;
+				// background-color: #000000;
+				// border-left: transparent;
+				border-left: 30rpx solid transparent;
+				border-bottom: 30rpx solid #000000;
+			}
+		}
+		
+		.buy {
+				
+			font-size: 32rpx;
+			font-family: PingFangSC-Semibold, PingFang SC;
+			font-weight: 600;
+			color: #FFFFFF;
+			height: 98rpx;
+			line-height: 98rpx;
+			text-align: center;
+			background: #2B2C3E;
+				
+		}
+		
+		.buyNums {
+			
+			padding: 32rpx 0;
+		
+			.buyNum_txt {
+				font-size: 28rpx;
+				font-family: PingFangSC-Semibold, PingFang SC;
+				font-weight: 600;
+				color: #333333;
+		
+			}
+		
+			
+		
+		
+			.shopButtomButton {
+				width: 32rpx;
+				height: 32rpx;
+				background: #2B2C3E;
+				border-radius: 50%;
+				color: #ffffff;
+			}
+		
+			.shopButtomRight {
+				font-size: 28rpx;
+				font-family: PingFangSC-Semibold, PingFang SC;
+				font-weight: 600;
+				color: #333333;
+			}
+		
+			.shopNumButton {
+				border-radius: 50%;
+				color: #aaaaaa;
+				width: 44rpx;
+				height: 44rpx;
+				background: #F5F5F5;
+				cursor: pointer;
+			}
+		
+			.shopNum {
+				padding: 0 32rpx;
+			}
+		
+		}
+
+	}
+
+	.showChooseSku {
+		transform: translateY(0);
 	}
 </style>
