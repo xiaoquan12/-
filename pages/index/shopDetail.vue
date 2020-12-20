@@ -130,7 +130,7 @@
 				</view>
 			</view>
 		</view>
-		<view class="evaluate_wrap p32 bgWhite">
+		<view class="evaluate_wrap p32 bgWhite bb10">
 			<view class="header alic" data-url="/pages/index/recentPurchase" @click="navigateTo">
 				<view class="flex-allcenter alic">
 					<view class="evaluate_title">
@@ -149,6 +149,15 @@
 				<view class="evalutate_item_wrap" v-for="(item,index) in new Array(5)" :key="index">
 					<RecentPurchaseItem></RecentPurchaseItem>
 				</view>
+			</view>
+		</view>
+		
+		<view class="detail bgWhite">
+			<view class="title">
+				-详情-
+			</view>
+			<view class="imgs">
+				<image src="../../static/images/jiu.png" mode="aspectFill"  v-for="(item,index) in new Array(2)"></image>
 			</view>
 		</view>
 
@@ -396,5 +405,27 @@
 		}
 
 
+	}
+	
+	.detail{
+		
+		.title{
+			
+			font-size: 28rpx;
+			font-family: PingFangSC-Regular, PingFang SC;
+			font-weight: 400;
+			color: #333333;
+			padding: 32rpx;
+			text-align: center;
+
+		}
+		
+		.imgs{
+			display: flex;
+			flex-direction: column;
+			image{
+				width: 100%;
+			}
+		}
 	}
 </style>
