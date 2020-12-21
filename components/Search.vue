@@ -94,7 +94,7 @@
 		border-radius: 4rpx;
 		background-color: #f5f5f5;
 		color: #999;
-		z-index: 999;
+		z-index: 100;
 	}
 
 	.search-box.index {

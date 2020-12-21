@@ -23,7 +23,6 @@
 			<view class="payType">
 				再次选择支付方式，重新支付：
 			</view>
-
 			<view class="flex-column-center types">
 				<radio-group name="" class="flex-column-center">
 					<label>
