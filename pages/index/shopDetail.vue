@@ -66,6 +66,7 @@
 					<image src="../../static/images/access_right.png" mode="aspectFill" class="access"></image>
 				</view>
 			</view>
+
 			<view class="goods_i">
 				<view class="title">
 					送至
@@ -124,7 +125,7 @@
 					<image src="../../static/images/access_right.png" mode="aspectFill" class="access"></image>
 				</view>
 			</view>
-			
+
 			<view class="flex-column-center evaluate_list">
 				<view class="evalutate_item_wrap" v-for="(item,index) in [1,1]" :key="index">
 					<!-- <EvaluateItem></EvaluateItem> -->
@@ -150,6 +151,64 @@
 				<view class="evalutate_item_wrap" v-for="(item,index) in [1,1,1,1]" :key="index">
 					<RecentPurchaseItem></RecentPurchaseItem>
 				</view>
+			</view>
+		</view>
+		<view class="detail bgWhite">
+			<view class="title">
+				-详情-
+			</view>
+			<view class="imgs">
+				<image src="../../static/images/jiu.png" mode="aspectFill" v-for="(item,index) in new Array(2)"></image>
+			</view>
+		</view>
+
+		<view class="chooseSkuDialog" v-if="isShowChooseSku" @click="closeChooseSku">
+
+		</view>
+		<view class="chooseSku flex-column-center" :class="{showChooseSku:isShowChooseSku}">
+			<image src="../../static/images/close.png" mode="aspectFill" class="close" @click="closeChooseSku"></image>
+			<view class="p32 flex-column-center">
+				<view class="flex">
+					<image src="../../static/images/jiu.png" mode="aspectFill" class="photo"></image>
+					<view class="flex-column-center">
+						<view class="price">
+							￥299
+						</view>
+						<view class="weight">
+							重量：10kg
+						</view>
+					</view>
+				</view>
+				<view class="flex-column-center">
+					<view class="choose_sku_title">
+						选择规格
+					</view>
+					<view class="list">
+						<view v-for="(item,index) in skuList" :key="index" :class="{selectSku:selectSkuIndex==index}" @click="selectSkuIndex=index">
+							{{item.name}}
+						</view>
+					</view>
+				</view>
+
+				<view class="flex flexbetween buyNums">
+					<view class="buyNum_txt">
+						购买数量
+					</view>
+					<view class="shopButtomRight flex-verCenter">
+						<view class="shopNumButton flex-allcenter" @click='subNum'>
+							-
+						</view>
+						<view class="shopNum">
+							{{buyNum}}
+						</view>
+						<view class="shopNumButton flex-allcenter" @click='addNum'>
+							+
+						</view>
+					</view>
+				</view>
+			</view>
+			<view class="buy">
+				立即购买
 			</view>
 		</view>
 		<BottomBuy></BottomBuy>
@@ -534,9 +593,9 @@
 				border-bottom: 30rpx solid #000000;
 			}
 		}
-		
+
 		.buy {
-				
+
 			font-size: 32rpx;
 			font-family: PingFangSC-Semibold, PingFang SC;
 			font-weight: 600;
@@ -545,24 +604,24 @@
 			line-height: 98rpx;
 			text-align: center;
 			background: #2B2C3E;
-				
+
 		}
-		
+
 		.buyNums {
-			
+
 			padding: 32rpx 0;
-		
+
 			.buyNum_txt {
 				font-size: 28rpx;
 				font-family: PingFangSC-Semibold, PingFang SC;
 				font-weight: 600;
 				color: #333333;
-		
+
 			}
-		
-			
-		
-		
+
+
+
+
 			.shopButtomButton {
 				width: 32rpx;
 				height: 32rpx;
@@ -570,14 +629,14 @@
 				border-radius: 50%;
 				color: #ffffff;
 			}
-		
+
 			.shopButtomRight {
 				font-size: 28rpx;
 				font-family: PingFangSC-Semibold, PingFang SC;
 				font-weight: 600;
 				color: #333333;
 			}
-		
+
 			.shopNumButton {
 				border-radius: 50%;
 				color: #aaaaaa;
@@ -586,11 +645,11 @@
 				background: #F5F5F5;
 				cursor: pointer;
 			}
-		
+
 			.shopNum {
 				padding: 0 32rpx;
 			}
-		
+
 		}
 
 	}
