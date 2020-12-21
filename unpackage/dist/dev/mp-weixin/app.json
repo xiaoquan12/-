@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/index/shopDetail",
     "pages/type/type",
     "pages/shopCar/shopCar",
     "pages/my/my",
@@ -15,7 +16,16 @@
     "pages/my/mySetting",
     "pages/my/accountAndSecurity",
     "pages/my/replacePhone",
-    "pages/my/replacePhoneNext"
+    "pages/my/replacePhoneNext",
+    "pages/my/feedback",
+    "pages/index/evaluateList",
+    "pages/index/recentPurchase",
+    "pages/index/ask",
+    "pages/index/askAndQuestion",
+    "pages/index/askDetail",
+    "pages/index/sreach",
+    "pages/index/searchResult",
+    "pages/index/question"
   ],
   "subPackages": [
     {
@@ -48,33 +58,33 @@
     "backgroundColor": "#ffffff"
   },
   "tabBar": {
-    "color": "#b3b6bb",
-    "selectedColor": "#ffffff",
+    "color": "#999999",
+    "selectedColor": "#000000",
     "borderStyle": "black",
-    "backgroundColor": "#1c1c1c",
+    "backgroundColor": "#ffffff",
     "list": [
       {
         "pagePath": "pages/index/index",
-        "iconPath": "static/images/my_dfk.png",
-        "selectedIconPath": "static/images/my_dfk.png",
+        "iconPath": "static/images/tab_pt_home_nor2x.png",
+        "selectedIconPath": "static/images/tab_pt_home_sel2x.png",
         "text": "首页"
       },
       {
         "pagePath": "pages/type/type",
-        "iconPath": "static/images/my_dfk.png",
-        "selectedIconPath": "static/images/my_dfk.png",
+        "iconPath": "static/images/tab_pt_fenlei_nor2x.png",
+        "selectedIconPath": "static/images/tab_pt_fenlei_sel2x.png",
         "text": "分类"
       },
       {
         "pagePath": "pages/shopCar/shopCar",
-        "iconPath": "static/images/my_dfk.png",
-        "selectedIconPath": "static/images/my_dfk.png",
+        "iconPath": "static/images/tab_pt_gouwuche_nor2x.png",
+        "selectedIconPath": "static/images/tab_pt_gouwuche_sel2x.png",
         "text": "购物车"
       },
       {
         "pagePath": "pages/my/my",
-        "iconPath": "static/images/my_dfk.png",
-        "selectedIconPath": "static/images/my_dfk.png",
+        "iconPath": "static/images/tab_pt_wode_nor2x.png",
+        "selectedIconPath": "static/images/tab_pt_wode_sel2x.png",
         "text": "我的"
       }
     ]
@@ -82,6 +92,5 @@
   "usingComponents": {
     "goods-show": "/components/GoodsShow",
     "no-data-bg": "/components/noDataBg"
-  },
-  "sitemapLocation": "sitemap77.json"
+  }
 }

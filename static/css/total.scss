@@ -1,0 +1,102 @@
+.small-line-top {
+  border-top: 2rpx solid #eee;
+}
+.ask-box {
+  padding: 32rpx;
+  border-bottom: 2rpx solid #eee;
+  textarea {
+    font-size: 28rpx;
+    color: #aaa;
+    font-weight: 400;
+  }
+}
+.ask-btn {
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 1);
+  line-height: 44rpx;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  background: #5ebbff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search-head {
+  width: 100%;
+  height: 80rpx;
+  padding: 40rpx 0 50rpx;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  .search-box {
+    margin: 0 20px;
+  }
+}
+
+.search-body {
+  padding: 188rpx 40rpx 40rpx;
+  .body-head {
+    h3 {
+      font-size: 40rpx;
+      font-weight: bold;
+      color: #333;
+    }
+    .delete {
+      image {
+        width: 35rpx;
+        height: 35rpx;
+      }
+    }
+  }
+  .body-con {
+    padding: 48rpx 0 16rpx;
+    li {
+      padding: 16rpx 32rpx;
+      margin: 0 32rpx 32rpx 0;
+      font-size: 22rpx;
+      color: #666;
+      background-color: #f8f8f8;
+      border-radius: 32rpx;
+    }
+  }
+  .body-result {
+    li {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      margin: 0 0 32rpx;
+      .cover {
+        image {
+          width: 260rpx;
+          height: 180rpx;
+          border-radius: 8rpx;
+        }
+      }
+      .contents {
+        width: 350rpx;
+        margin-left: 24rpx;
+        .title {
+          padding-top: 4rpx;
+          padding-bottom: 16rpx;
+          font-weight: bold;
+          font-size: 32rpx;
+          color: #333;
+        }
+        .subTitle {
+          font-size: 24rpx;
+          color: #999;
+        }
+      }
+    }
+  }
+}

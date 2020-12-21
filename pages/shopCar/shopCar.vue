@@ -26,7 +26,7 @@
 			<view class="marL20 allPrice" v-show='!isEdit'>
 				￥188
 			</view>
-			<view class="buyButton flex-allcenter">
+			<view class="buyButton flex-allcenter" @click='buyButton'>
 				{{isEdit?"删除":"立即购买"}}
 			</view>
 		</view>
@@ -61,6 +61,28 @@
 			};
 		},
 		methods:{
+			buyButton(){
+				if(this.isEdit){
+					this.$ui.showModal("是否删除所选").then(res=>{
+						const waitSplice=[];
+						this.shopList.forEach((item,index)=>{
+							if(item.isChoose){
+								const spliceIndex=this.chooseList.findIndex((itemS,indexS)=>{
+									return item.id==itemS.id;
+								})
+								this.chooseList.splice(spliceIndex,1);
+								waitSplice.push(index)
+							}
+						})
+						console.log("waitSplice",waitSplice);
+						waitSplice.forEach((item,index)=>{
+							this.shopList.splice(0,1)
+						})
+					})
+				}else{
+					
+				}
+			},
 			chooseAll(){
 				this.isChooseAll=!this.isChooseAll;
 				if(this.isChooseAll){

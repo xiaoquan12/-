@@ -124,8 +124,9 @@
 					<image src="../../static/images/access_right.png" mode="aspectFill" class="access"></image>
 				</view>
 			</view>
+			
 			<view class="flex-column-center evaluate_list">
-				<view class="evalutate_item_wrap" v-for="(item,index) in new Array(2)" :key="index">
+				<view class="evalutate_item_wrap" v-for="(item,index) in [1,1]" :key="index">
 					<!-- <EvaluateItem></EvaluateItem> -->
 				</view>
 			</view>
@@ -146,72 +147,11 @@
 				</view>
 			</view>
 			<view class="flex-column-center evaluate_list">
-				<view class="evalutate_item_wrap" v-for="(item,index) in new Array(5)" :key="index">
+				<view class="evalutate_item_wrap" v-for="(item,index) in [1,1,1,1]" :key="index">
 					<RecentPurchaseItem></RecentPurchaseItem>
 				</view>
 			</view>
 		</view>
-
-		<view class="detail bgWhite">
-			<view class="title">
-				-详情-
-			</view>
-			<view class="imgs">
-				<image src="../../static/images/jiu.png" mode="aspectFill" v-for="(item,index) in new Array(2)"></image>
-			</view>
-		</view>
-
-		<view class="chooseSkuDialog" v-if="isShowChooseSku" @click="closeChooseSku">
-
-		</view>
-		<view class="chooseSku flex-column-center" :class="{showChooseSku:isShowChooseSku}">
-			<image src="../../static/images/close.png" mode="aspectFill" class="close" @click="closeChooseSku"></image>
-			<view class="p32 flex-column-center">
-				<view class="flex">
-					<image src="../../static/images/jiu.png" mode="aspectFill" class="photo"></image>
-					<view class="flex-column-center">
-						<view class="price">
-							￥299
-						</view>
-						<view class="weight">
-							重量：10kg
-						</view>
-					</view>
-				</view>
-				<view class="flex-column-center">
-					<view class="choose_sku_title">
-						选择规格
-					</view>
-					<view class="list">
-						<view v-for="(item,index) in skuList" :key="index" :class="{selectSku:selectSkuIndex==index}" @click="selectSkuIndex=index">
-							{{item.name}}
-						</view>
-					</view>
-				</view>
-
-				<view class="flex flexbetween buyNums">
-					<view class="buyNum_txt">
-						购买数量
-					</view>
-					<view class="shopButtomRight flex-verCenter">
-						<view class="shopNumButton flex-allcenter" @click='subNum'>
-							-
-						</view>
-						<view class="shopNum">
-							{{buyNum}}
-						</view>
-						<view class="shopNumButton flex-allcenter" @click='addNum'>
-							+
-						</view>
-					</view>
-				</view>
-			</view>
-			<view class="buy">
-				立即购买
-			</view>
-		</view>
-
-
 		<BottomBuy></BottomBuy>
 	</view>
 </template>

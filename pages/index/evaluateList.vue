@@ -7,7 +7,7 @@
 		</view>
 
 		<view class="list flex-column-center p32 bgWhite">
-			<view class="item_wrap" v-for="(item,index) in new Array(10)" :key="index">
+			<view class="item_wrap" v-for="(item,index) in [1,1]" :key="index">
 				<EvaluateItem :imgsStyle="imgsStyle"></EvaluateItem>
 			</view>
 		</view>
@@ -77,14 +77,11 @@
 			cursor: pointer;
 
 		}
-
-
 		.select {
 			color: white;
 
 		}
 	}
-
 	.item_wrap {
 		border-bottom: 1rpx solid #F6F6F6;
 	}

@@ -2,11 +2,10 @@
 <template>
 	<view>
 		<view class="goods_wrap">
-			<AfterSaleGoods :isShowSelectNum="false" :isShowPriceAndNum="false" :goods="{}"></AfterSaleGoods>
+			<AfterSaleGoods isShowSelectNum="false"  isShowPriceAndNum="false" :goods="{}"></AfterSaleGoods>
 		</view>
-
 		<view class="list">
-			<view v-for="(item,index) in new Array(100)" :key="index">
+			<view v-for="(item,index) in [1,1,1]" :key="index">
 				<RecentPurchaseItem></RecentPurchaseItem>
 			</view>
 		</view>
@@ -15,11 +14,11 @@
 
 <script>
 	import RecentPurchaseItem from '../../components/recentPurchaseItem.vue'
+	import AfterSaleGoods from '../../components/afterSaleGoods.vue'
 	export default {
 		components: {
 			RecentPurchaseItem,
-			AfterSaleGoods: () => import('../../components/afterSaleGoods.vue')
-
+			AfterSaleGoods
 		},
 		data() {
 			return {
