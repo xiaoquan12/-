@@ -258,7 +258,16 @@
 				"enablePullDownRefresh": false
 			}
 
-		}]
+		}    ,{
+                    "path" : "paymentCenter",
+                    "style" :                                                                                    
+                {
+                    "navigationBarTitleText": "支付中心",
+                    "enablePullDownRefresh": false
+                }
+                
+                }
+            ]
 	}, {
 		"root": "pages/afterSale",
 		"pages": [{
