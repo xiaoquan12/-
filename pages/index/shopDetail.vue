@@ -589,8 +589,8 @@
 				// width: 30rpx;
 				// background-color: #000000;
 				// border-left: transparent;
-				border-left: 30rpx solid transparent;
-				border-bottom: 30rpx solid #000000;
+				border-left: 14rpx solid transparent;
+				border-bottom: 14rpx solid #000000;
 			}
 		}
 
