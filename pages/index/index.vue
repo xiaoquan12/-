@@ -30,7 +30,7 @@
 		</view>
 		<view class="width686 marT30 flexbetween relative flex-wrap">
 			<block v-for='(item,index) in allShop' :key='index'>
-			     <VerticalShop :styles='(index==0||index==1)?stylesAll:stylesAllT'></VerticalShop>
+			     <VerticalShop @turnDetail='turnDetail' :styles='(index==0||index==1)?stylesAll:stylesAllT'></VerticalShop>
 			</block>
 		</view>
 	</view>
@@ -69,7 +69,9 @@
 
 		},
 		methods: {
-
+            turnDetail(){
+				this.$common.redirect("/pages/index/shopDetail")
+			}
 		}
 	}
 </script>

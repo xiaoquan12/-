@@ -1,5 +1,5 @@
 <template>
-	<view class='verticalShop relative' :style="{'width':styles.width+'rpx','margin-top':(styles.marT?styles.marT:0)+'rpx'}">
+	<view @click='turnDetail()' class='verticalShop relative' :style="{'width':styles.width+'rpx','margin-top':(styles.marT?styles.marT:0)+'rpx'}">
 		 <view class="number flex-allcenter" style='background-color: #FF6767;' v-if='isOne'>TOP1</view>
 		 <view class="number flex-allcenter" style='background-color: #FFB267;' v-if='isTwo'>TOP2</view>
 		 <view class="number flex-allcenter" style='background-color: #67BDFF;' v-if='isThree'>TOP3</view>
@@ -40,6 +40,11 @@
 			return {
 				
 			};
+		},
+		methods:{
+			turnDetail(){
+			   this.$emit("turnDetail",'');
+			},
 		}
 	}
 </script>
