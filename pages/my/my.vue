@@ -114,6 +114,10 @@
 					<view class="name">
 						{{item.text}}
 					</view>
+
+					<view class="" v-if="item.text=='联系客服'">
+						<button type="default" open-type="contact" class="contact" style="border:0;"></button>
+					</view>
 				</view>
 			</view>
 		</view>
@@ -377,6 +381,7 @@
 				display: flex;
 				flex-direction: column;
 				align-items: center;
+				position: relative;
 
 				image {
 					width: 64rpx;
@@ -395,6 +400,17 @@
 				}
 			}
 
+			.contact {
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+			}
+			button::after{
+				border: none;
+			}
+
 		}
 
 		.system {
@@ -405,6 +421,4 @@
 
 		}
 	}
-
-
 </style>
