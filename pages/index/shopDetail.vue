@@ -595,7 +595,6 @@
 		}
 
 		.buy {
-
 			font-size: 32rpx;
 			font-family: PingFangSC-Semibold, PingFang SC;
 			font-weight: 600;
@@ -604,7 +603,6 @@
 			line-height: 98rpx;
 			text-align: center;
 			background: #2B2C3E;
-
 		}
 
 		.buyNums {
