@@ -2,7 +2,7 @@
 <template>
   <div>
     <div class="nothingBox">
-      <image src="../static/images/nothing.png" mode="aspectFit" />
+      <image src="../static/images/kongzhuangtai.png" mode="aspectFit" />
       <slot name="nothing"></slot>
     </div>
   </div>
