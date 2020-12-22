@@ -12,13 +12,13 @@
 		<view class="width686 flexbetween">
 			<block v-for='(item,index) in [1,1,1]' :key='index'>
 				<block v-if='index==0'>
-					<VerticalShop :styles='styles' isOne='true'></VerticalShop>
+					<VerticalShop  @turnDetail='turnDetail' :styles='styles' isOne='true'></VerticalShop>
 				</block>
 				<block v-if='index==1'>
-					<VerticalShop :styles='styles' isTwo='true'></VerticalShop>
+					<VerticalShop  @turnDetail='turnDetail' :styles='styles' isTwo='true'></VerticalShop>
 				</block>
 				<block v-if='index==2'>
-					<VerticalShop :styles='styles' isThree='true'></VerticalShop>
+					<VerticalShop  @turnDetail='turnDetail' :styles='styles' isThree='true'></VerticalShop>
 				</block>
 			</block>
 		</view>
@@ -66,9 +66,35 @@
 			}
 		},
 		onLoad() {
-
+            //接口请求实例
+		    this.example().then(res=>{
+				console.log("111");
+			}).catch(err=>{
+				console.log("err",err);
+			})
 		},
 		methods: {
+			//
+			example(){
+				return new Promise((resolve, reject) => {
+					this.$api.common
+						.get('/plus/qkk/list/v3.0/quanjinwa.ashx?action=videolist', {
+							city: '九江市',
+							channelid: channelid,
+							classid: classid ? classid : 0,
+							elite: elite ? elite : 0,
+							specialid: specialid ? specialid : 0,
+							pageindex: pageindex,
+							pagesize: pagesize
+						})
+						.then(res => {
+							resolve(res);
+						})
+						.catch(err => {
+							reject(err);
+						});
+				});
+			},
             turnDetail(){
 				this.$common.redirect("/pages/index/shopDetail")
 			}

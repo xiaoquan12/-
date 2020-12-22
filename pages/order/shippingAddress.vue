@@ -22,7 +22,7 @@
 						</view>
 					</view>
 				</view>
-				<view class="">
+				<view class="" @click='editAddress'>
 					<image src="../../static/images/edit.png" mode="aspectFill" class="edit_img"></image>
 				</view>
 				<view class="delete">
@@ -48,6 +48,9 @@
 			};
 		},
 		methods: {
+			editAddress(){
+				this.$common.redirect('/pages/order/addShippingAddress')
+			},
 			// ListTouch触摸开始
 			ListTouchStart(e) {
 				this.listTouchStart = e.touches[0].pageX

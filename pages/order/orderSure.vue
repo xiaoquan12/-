@@ -3,7 +3,7 @@
 		<view class="width686 marT30 orderTitle">
 			您需要我们送到哪里
 		</view>
-		<view class="width686 marT30 flexbetween paddingB20 borderB flex-verCebter">
+		<view  @click='addAddress()' class="width686 marT30 flexbetween paddingB20 borderB flex-verCebter">
 			<view class="addressText">添加收货地址</view>
 			<view class="addressIcon">></view>
 		</view>
@@ -87,6 +87,11 @@
 					imgHeight:200
 				}
 			};
+		},
+		methods:{
+			addAddress(){
+				this.$common.redirect("/pages/order/shippingAddress")
+			}
 		}
 	}
 </script>

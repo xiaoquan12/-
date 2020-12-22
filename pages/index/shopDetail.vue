@@ -158,7 +158,7 @@
 				-详情-
 			</view>
 			<view class="imgs">
-				<image src="../../static/images/jiu.png" mode="aspectFill" v-for="(item,index) in new Array(2)"></image>
+				<image src="../../static/images/jiu.png" mode="aspectFill" v-for="(item,index) in [1,1]"></image>
 			</view>
 		</view>
 
@@ -207,7 +207,7 @@
 					</view>
 				</view>
 			</view>
-			<view class="buy">
+			<view class="buy" @click='buy'>
 				立即购买
 			</view>
 		</view>
@@ -247,6 +247,9 @@
 
 		},
 		methods: {
+			buy(){
+				this.$common.redirect("/pages/order/orderSure")
+			},
 			collectTap() {
 				this.isCollect = !this.isCollect
 			},

@@ -213,7 +213,13 @@
 			}
 
 		}
-	],
+	    ,{
+            "path" : "pages/my/comment",
+            "style" : {
+				"navigationBarTitleText": "我的点评"
+			}
+        }
+    ],
 	"subPackages": [{
 		"root": "pages/order",
 		"pages": [{
