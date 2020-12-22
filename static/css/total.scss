@@ -153,3 +153,54 @@
 .life-list {
   padding-top: 30rpx;
 }
+.comment-list {
+  border-top: 2rpx solid #eee;
+
+  li {
+    padding: 24rpx 40rpx;
+    border-bottom: 2rpx solid #eee;
+
+    .comment-user {
+      .avatar {
+        width: 64rpx;
+        height: 64rpx;
+        border-radius: 100%;
+      }
+
+      .nick {
+        margin-left: 16rpx;
+        font-size: 30rpx;
+        color: #333;
+      }
+
+      .time {
+        font-size: 22rpx;
+        color: #666;
+      }
+    }
+
+    .comment-star {
+      margin-left: 80rpx;
+
+      .star {
+        image {
+          width: 22rpx;
+          height: 22rpx;
+          margin-right: 6rpx;
+        }
+      }
+
+      .rate {
+        font-size: 22rpx;
+        color: #666;
+      }
+    }
+
+    .comment-con {
+      margin-left: 80rpx;
+      margin-top: 20rpx;
+      font-size: 24rpx;
+      color: #666;
+    }
+  }
+}

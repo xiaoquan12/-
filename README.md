@@ -5,7 +5,6 @@
 ```
 prettier vetur
 ```
-
 #### 安装项目
 
 ```
@@ -67,7 +66,7 @@ npm run build
         |   |-- subPages
         |       |-- index.vue
         |-- router                  //路由
-        |   |-- index.js
+        |   |-- index.js           
         |   |-- router.js           //路由公用方法
         |-- static
         |   |-- css

@@ -8,15 +8,20 @@
 		    </view>
 		</view>
 	    <view class='shopSon flex-verCenter' :class="{'marT20':index==0}" v-for="(item,index) in shopList" :key="index">
-			<view class="chooseShop flex-alcenter" @click='chooseShops(item,index)'>
-				<image src="../../static/images/my_dfk.png" v-show='item.isChoose' class='chooseIcon' mode="widthFix"></image>
-			</view>
+			<image class="chooseShop flex-alcenter" src="/static/images/icon_sel.png" v-show='item.isChoose' mode="widthFix" @click='chooseShops(item,index)'>
+			</image>
+			<image class="chooseShop flex-alcenter" src="/static/images/icon_nor.png" v-show='!item.isChoose' mode="widthFix" @click='chooseShops(item,index)'>
+			</image>
 	    	<rowShop :config='config'></rowShop>
 	    </view>
 		<view class="buyView flex-verCenter">
-			<view class="chooseShop flex-alcenter" @click='chooseAll'>
+			<image class="chooseShop flex-alcenter" src="/static/images/icon_sel.png" v-show='isChooseAll' mode="widthFix" @click='chooseAll'>
+			</image>
+			<image class="chooseShop flex-alcenter" src="/static/images/icon_nor.png" v-show='!isChooseAll' mode="widthFix" @click='chooseAll'>
+			</image>
+			<!-- <view class="chooseShop flex-alcenter" @click='chooseAll'>
 				<image src="../../static/images/my_dfk.png" v-show='isChooseAll' class='chooseIcon' mode="widthFix"></image>
-			</view>
+			</view> -->
 			<view class="chooseText marL10" @click='chooseAll'>
 				全选
 			</view>
@@ -146,8 +151,7 @@
 		// margin-right: 26rpx;
 		width: 31rpx;
 		height: 31rpx;
-		background: #2B2C3E;
-		border-radius: 50%;
+		
 	}
 	.buyView{
 		position: fixed;

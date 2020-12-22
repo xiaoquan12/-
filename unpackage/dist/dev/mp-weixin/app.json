@@ -28,7 +28,8 @@
     "pages/index/question",
     "pages/login/login",
     "pages/login/register",
-    "pages/login/agreement"
+    "pages/login/agreement",
+    "pages/my/comment"
   ],
   "subPackages": [
     {
@@ -97,6 +98,5 @@
   "usingComponents": {
     "goods-show": "/components/GoodsShow",
     "no-data-bg": "/components/noDataBg"
-  },
-  "sitemapLocation": "sitemap1.json"
+  }
 }

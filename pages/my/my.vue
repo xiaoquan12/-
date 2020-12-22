@@ -158,7 +158,7 @@
 				systemMenu: [{
 					img: "/static/images/my_wdpl.png",
 					text: "我的评论",
-					url: ""
+					url: "/pages/my/comment"
 				}, {
 					img: "/static/images/my_shdz.png",
 					text: "收货地址",
